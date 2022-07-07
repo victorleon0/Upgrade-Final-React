@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
-import './Login.scss';
+import './Register.scss';
 import Navigation from "../../components/Navigation/Navigation";
 
-const Login = (prop) => {
+const Register = (prop) => {
   const [form, setForm] = useState({ email: "", password: "" });
 
-  const submitLogin = (ev) => {
+  const submitRegister = (ev) => {
     ev.preventDefault();
-    prop.loginUser(form);
+    prop.registerUser(form);
   };
 
   const handleInput = (ev) =>
@@ -22,8 +22,26 @@ const Login = (prop) => {
     <div className="formContainer">
       
             
-              <h4>Login</h4>
-              <form onSubmit={submitLogin}>
+              <h4>Regístrate</h4>
+              <form onSubmit={submitRegister}>
+              <input
+                  type="text"
+                  name="name"
+                  placeholder="Nombre"
+                  onChange={handleInput}
+                />
+                <input
+                  type="text"
+                  name="surname"
+                  placeholder="Apellidos"
+                  onChange={handleInput}
+                />
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="Teléfono"
+                  onChange={handleInput}
+                />
                 <input
                   type="text"
                   name="username"
@@ -38,8 +56,8 @@ const Login = (prop) => {
                   placeholder="Password"
                   onChange={handleInput}
                 />
-                <button className="submit" type="submit" value="Login" onClick={submitLogin}>Login</button>
-                <p>¿No tienes cuenta? Regístrate</p>
+                <button className="submit" type="submit" value="Login" onClick={submitRegister}>Login</button>
+                <p>¿Ya tienes cuenta? Inicia Sesión</p>
               </form>
             </div>
           
@@ -47,4 +65,4 @@ const Login = (prop) => {
   );
 };
 
-export default Login;
+export default Register;
