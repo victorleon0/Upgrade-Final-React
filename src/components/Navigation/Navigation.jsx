@@ -33,6 +33,14 @@ const Navigation = () => {
       <Link to="/travel">
         <button className="buttonTravel">¡TRAVEL NOW!</button>
       </Link>
+      <Link to="/login">
+      <img className="usericon"
+        width="50px"
+        src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
+        alt="User"
+      />
+      </Link>
+    
     </div>
 
      

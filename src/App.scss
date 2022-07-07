@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 100px;
+
+}
+.buscadorHome {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  
+}
