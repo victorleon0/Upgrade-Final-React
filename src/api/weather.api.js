@@ -1,6 +1,8 @@
 // KEY: 057e18e0685c4d93baf83751220607
 
-// https://api.weatherapi.com/v1/current.json?key=057e18e0685c4d93baf83751220607&q=madrid&aqi=no
+// https://api.weatherapi.com/v1/current.json?key=057e18e0685c4d93baf83751220607&q=${ciudad}&aqi=no
+
+
 
 
 
@@ -25,11 +27,11 @@ const getWeather = async (url) => {
       const res = await fetch(url);
       const {name, country, temperature, localtime, condition, conditionIcon} = await res.json();
       const cityWeather = {
-        name: city.map((name) => location.name),
-        country: city.map((country) => location.country),
-        temperature: city.map((temp_c) => location.temp_c),
-        condition: city.map((text) => condition.text),
-        conditionIcon: city.map((icon) => condition.icon),
+        //name: city.map((name) => location.name),
+        //country: city.map((country) => location.country),
+        //temperature: city.map((temp_c) => location.temp_c),
+        //condition: city.map((text) => condition.text),
+        //conditionIcon: city.map((icon) => condition.icon),
       };
   
       return cityWeather;
@@ -41,7 +43,7 @@ const getWeather = async (url) => {
   
   const getWeatherList = async() => {
     try {
-      const res = await fetch("http://api.weatherapi.com/v1/current.json?key=057e18e0685c4d93baf83751220607&q=${madrid}&aqi=no", {mode: 'cors'})
+      const res = await fetch("https://api.weatherapi.com/v1/current.json?key=057e18e0685c4d93baf83751220607&q=${ciudad}&aqi=no", {mode: 'cors'})
       const result = await res.json();
       return result.results;
     } catch (error) {
