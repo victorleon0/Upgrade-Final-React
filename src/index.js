@@ -12,6 +12,7 @@ import Weather from "./pages/Weather/Weather";
 import Travel from "./pages/Travel/Travel";
 import Events from "./pages/Events/Events";
 import Login from "./pages/Login/Login.jsx";
+import Admin from "./pages/Admin/Admin.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,6 +27,7 @@ root.render(
       <Route path="/weather" element={<Weather />} />
       <Route path="/travel" element={<Travel/>} />
       <Route path="/login" element={<Login/>} />
+      <Route path="/admin" element={<Admin/>} />
     </Routes>
   </React.StrictMode>
   </Router>
