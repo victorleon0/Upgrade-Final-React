@@ -29,7 +29,7 @@ root.render(
       <Route path="/weather" element={<Weather />} />
       <Route path="/travel" element={<Travel/>} />
       <Route path="/login" element={<Login/>} />
-      <Route path="/register" element={<Register/>} />
+      <Route path="/users/register" element={<Register/>} />
       <Route path="/admin" element={<Admin/>} />
       <Route path="/user" element={<User/>} />
     </Routes>
