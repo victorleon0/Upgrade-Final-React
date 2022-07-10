@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '../../components/Navigation/Navigation.jsx';
+import Contact from "../../components/Contact/Contact.jsx";
 
 const Events = () => {
   return (
@@ -7,7 +8,9 @@ const Events = () => {
     <div>
     <div className="navigator">
     <Navigation />
+    
     </div>
+    <Contact />
     </div>
     
     
