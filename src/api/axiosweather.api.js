@@ -2,7 +2,7 @@
 
 // https://api.weatherapi.com/v1/current.json?key=057e18e0685c4d93baf83751220607&q=${ciudad}&aqi=no
 
-
+// https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={f93afd7c993ac5daa11a4b336bf3c98c}
 
  
 import axios from "axios";
