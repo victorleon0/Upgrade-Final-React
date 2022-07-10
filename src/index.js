@@ -22,7 +22,6 @@ import UserEdit from "./pages/User/UserEdit";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-<<<<<<< HEAD
   <Provider store={store}>
     <Router>
       <React.StrictMode>
@@ -34,7 +33,7 @@ root.render(
           <Route path="/weather" element={<Weather />} />
           <Route path="/travel" element={<Travel />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/users/register" element={<Register />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/manageusers" element={<ManageUsers />} />
           <Route path="/admin/adduser" element={<AddUser />} />
@@ -44,24 +43,5 @@ root.render(
       </React.StrictMode>
     </Router>
   </Provider>
-=======
-
-  <Router>
-  <React.StrictMode>
-  <Routes>
-      <Route exact path="/" element={<App />} />
-      <Route path="/food" element={<Restaurants/>} />
-      <Route path="/trips" element={<Trips/>} />
-      <Route path="/events" element={<Events />} />
-      <Route path="/weather" element={<Weather />} />
-      <Route path="/travel" element={<Travel/>} />
-      <Route path="/login" element={<Login/>} />
-      <Route path="/users/register" element={<Register/>} />
-      <Route path="/admin" element={<Admin/>} />
-      <Route path="/user" element={<User/>} />
-    </Routes>
-  </React.StrictMode>
-  </Router>
->>>>>>> user
 );
 //registerServiceWorker();
