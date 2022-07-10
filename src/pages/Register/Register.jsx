@@ -28,11 +28,11 @@ const Register = (prop) => {
   return (
     <div class="login">
       <div className="navigator">
-        <Navigation />
+        {/* <Navigation /> */}
       </div>
       <div className="formContainer">
         <h4>Regístrate</h4>
-        <form onSubmit={submitRegister} method="get">
+        <form onSubmit={submitRegister} method="post" action="http://localhost:6000/users/register">
           <input
             type="email"
             name="email"
