@@ -2,11 +2,15 @@
     text-align: center;
     width: 100%;
     height: 12vh;
-  
+    position: fixed;
+    z-index: 100;
+    
+    
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     box-shadow: inset;
+    background-color: whitesmoke;
     .searchbar {
       flex: 1;
       margin-top: 20px;

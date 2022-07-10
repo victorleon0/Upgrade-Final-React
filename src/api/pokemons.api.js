@@ -27,7 +27,7 @@ const getIndividualPokemon = async (url) => {
   
   const getPokemonsList = async() => {
     try {
-      const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151", {mode: 'cors'})
+      const res = await fetch("http://localhost:6000/experiences", {mode: 'cors'})
       const result = await res.json();
       return result.results;
     } catch (error) {
