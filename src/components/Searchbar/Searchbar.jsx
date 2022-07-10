@@ -13,6 +13,7 @@ const Searchbar = (e) => {
         alt="Home"
       />
       </Link>
+      
       <input id="input-search" type="text" placeholder="¿Dónde vamos?" />
       <button className="geolocationButton">
         <img
@@ -27,3 +28,7 @@ const Searchbar = (e) => {
 };
 
 export default Searchbar;
+
+
+
+

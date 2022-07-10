@@ -5,7 +5,11 @@ const Travel = () => {
   return (
     <div>
         <Navigation/>
+        <div className='skyscanner'>
+
     </div>
+    </div>
+    
   )
 }
 
