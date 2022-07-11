@@ -1,0 +1,91 @@
+#container__forms {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 80px;
+}
+
+#container__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid gray;
+  background-color: gray;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: -500px;
+  width: 440px;
+  height: 425px;
+  font-size: 16px;
+}
+
+#container__first, #container__last, #container__email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 3px;
+  border: 1px solid gray;
+  background-color: gray;
+  width: 400px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+#container__first input, #container__last input, #container__email input {
+  margin-left: 5px;
+  margin-top: 5px;
+  height: 26px;
+  font-size: 12px;
+  padding-left: 5px;
+  font-family: monaco, Consolas, Lucida Console, monospace;
+}
+
+#container__submit {
+  border-radius: 5px;
+  border: 1px solid black;
+  color: white;
+  background-color: black;
+  width: 87%;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 12px;
+  margin-left: 25px;
+}
+
+#container__submit input {
+  width: 100%;
+  border: 1px solid black;
+  color: white;
+  background-color: black;
+  font-size: 14px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+#container__message {
+  margin-left: 15px;
+  margin-top: 12px;
+}
+
+#container__area {
+  width: 91%;
+  font-size: 12px;
+  height: 120px;
+  margin-left: 5px;
+  margin-top: 5px;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+/*# sourceMappingURL=Contact.css.map */
