@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./Register.scss";
+import Navigation from "../../components/Navigation/Navigation";
 
 const Register = (/* prop */) => {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -36,9 +37,9 @@ const Register = (/* prop */) => {
     
 
   return (
-    <div className="login">
+    <div className="register">
       <div className="navigator">
-        {/* <Navigation /> */}
+      <Navigation />
       </div>
       <div className="formContainer">
         <h4>Regístrate</h4>

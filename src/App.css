@@ -107,4 +107,8 @@
   -o-object-fit: fill;
      object-fit: fill;
 }
+
+.navigator {
+  background-color: transparent;
+}
 /*# sourceMappingURL=App.css.map */

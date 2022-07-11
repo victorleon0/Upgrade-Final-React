@@ -44,7 +44,7 @@ const Login = (prop) => {
           >
             Login
           </button>
-          <p>¿No tienes cuenta? Regístrate</p>
+          <a href="/users/register">¿No tienes cuenta? Regístrate</a>
         </form>
       </div>
     </div>

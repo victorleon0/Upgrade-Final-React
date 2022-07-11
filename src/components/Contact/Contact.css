@@ -21,7 +21,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #edc97a;
+  background: -webkit-gradient(linear, left top, right bottom, from(#f8df7b), to(#B05574));
+  background: linear-gradient(to bottom right, #f8df7b, #B05574);
   border-radius: 10px;
   margin-top: 25px;
   margin-bottom: -500px;
