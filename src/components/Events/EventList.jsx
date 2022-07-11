@@ -1,36 +1,24 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
+import Event from './Event.jsx';
+import PropTypes from 'prop-types';
 
-class EventList extends Component{
-
-render(){
-
-  const events = this.props.events.map((event,i)=>{
-    return(
-      <a href={event.url} className="event" key={i}>
-        <div>
-        {event.logo ? <img className="event-image" src={event.logo.url} alt={event.name.text} /> : null}
-        </div>
-        <div className="event-info">
-          <h1 className="event-title">{event.name.text}</h1>
-          <h2 className="event-date">{new Date(event.start.local).toDateString() }</h2>
-          <h2 className="event-date">{new Date(event.start.local).toLocaleTimeString().slice(0,5) }</h2>
-          <div>
-            {event.description.text&&event.description.text.length >200 ?
-               <p className="event-description">{event.description.text.substr(0,200)}...</p> :
-               <p className="event-description">{event.description.text}</p>
-             }
-          </div>
-        </div>
-      </a>
-    )
-  })
-
-    return(
-      <div className="event-container">
-        {events}
-        {this.props.error && <p className="apology">{this.props.error}</p>}
-      </div>
-    )}
+class EventList extends Component {
+    render() {
+        return(
+            <div className="uk-child-width-1-3@m" uk-grid="true">
+                { Object.keys(this.props.eventos).map(key => (
+                    <Event
+                            key={key}
+                            info={this.props.eventos[key]}
+                    ></Event>
+                )) }
+            </div>
+        )
+    }
 }
 
-export default EventList
+EventList.propTypes = {
+    eventos: PropTypes.array.isRequired,
+}
+
+export default EventList;

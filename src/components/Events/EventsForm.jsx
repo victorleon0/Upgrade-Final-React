@@ -1,89 +1,71 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class EventsForm extends Component {
 
-state = {
-  city: '',
-  category: '',
-  subcategory: '',
-}
+    nombreEventoRef = React.createRef();
+    categoriaRef = React.createRef();
 
-  onChangeHandler = e => {
+    buscarEvento = (e) => {
+        e.preventDefault();
 
-    this.setState({
-      ...this.state,
-      [e.target.name]: e.target.value
-    });
+        // ***** Crear el objeto
+        const datosBusqueda = {
+            nombre: this.nombreEventoRef.current.value,
+            categoria: this.categoriaRef.current.value,
+        }
+        // console.log(datosBusqueda);
 
-  };
-
-  componentDidUpdate(prevProps, prevState){
-  if(prevState.category!==this.state.category)
-    {this.props.getSubCategories(this.state.category)};
-  }
-
-  render(){
-    let subcat;
-    if(this.state.category!==''){
-
-      subcat =
-      <select
-          className="dropdown"
-          name="subcategory"
-          onChange={this.onChangeHandler}
-        >
-          <option value="">Select Subcategory</option>
-          {this.props.subcategories.map(subcategory => (
-                <option
-                  key={subcategory.id}
-                  value={subcategory.id}
-
-                >
-                  {subcategory.name_localized}
-                </option>
-              ))};
-
-        </select>
+        // ***** Pasarlo por props
+        this.props.obtenerEventos(datosBusqueda);
     }
 
-    return(
-      <form className="form-container" onSubmit={e => {
-                e.preventDefault();
-                this.props.getEvents(this.state);
+    mostrarOpciones = (key) => {
+        // console.log(key);
+        const categoria = this.props.categorias[key];
+        // console.log(categoria);
+        const { id, name_localized } = categoria;
 
-              }}>
+        if(!id || !name_localized) return null;
 
-<input className="city-input" type="text" name="city" placeholder="Location..." onChange={this.onChangeHandler} />
-<div>
-  <select
-    className="dropdown"
-    name="category"
-    onChange={this.onChangeHandler}
-  >
-    <option value="">Select Category</option>
-    {this.props.categories.map(category => (
-          <option
-            key={category.id}
-            value={category.id}
+        return(
+            <option key={id} value={id}>{name_localized}</option>
+        )
+    }
 
-          >
-            {category.name_localized}
-          </option>
-        ))};
+    render() {
 
-  </select>
-</div>
-<div>{subcat}</div>
-<div>
-  <input
-    type="submit"
-    className="search-button"
-    value="Search"
-  />
-</div>
-</form>
-    )
-  }
+        const categorias = Object.keys(this.props.categorias);
+        // console.log(categorias);
+        
+        return (
+            <form action="" onSubmit={this.buscarEvento}>
+                <fieldset className="uk-fieldset uk-margin">
+                    <legend className="uk-legend uk-text-center">
+                        Busca tu evento por nombre o categoría
+                    </legend>
+                    <div className="uk-column-1-3@m uk-margin">
+                        <div className="uk-margin" uk-margin="true">
+                            <input ref={this.nombreEventoRef} className="uk-input" type="text" placeholder="Nombre de Evento o Ciudad"/>
+                        </div>
+                        <div className="uk-margin" uk-margin="true">
+                            <select ref={this.categoriaRef} className="uk-select" name="" id="">
+                                {categorias.map(this.mostrarOpciones)}
+                            </select>
+                        </div>
+                        <div className="uk-margin" uk-margin="true">
+                            <button className="uk-button uk-button-danger">Buscar</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        )
+    }
 }
 
-export default EventsForm
+EventsForm.propTypes = {
+    obtenerEventos: PropTypes.func.isRequired,
+    categorias: PropTypes.array.isRequired,
+}
+
+export default EventsForm;

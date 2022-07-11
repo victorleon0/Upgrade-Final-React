@@ -1,79 +1,78 @@
-import React, {Component} from 'react';
-import axios from 'axios';
-
-import EventsForm from '../../components/Events/EventsForm';
-import EventList from '../../components/Events/EventList';
+import React, { Component } from "react";
+import Navigation from "../../components/Navigation/Navigation";
+import EventsForm from "../../components/Events/EventsForm";
+import EventList from "../../components/Events/EventList";
+import Footer from "../../components/Footer/Footer"
 
 class Events extends Component {
-constructor(props){
-  super(props);
+  token = "6NWNDLHLOGO6UBJ6FAWS";
+  ordenar = "date";
 
-  this.state={
-    events: [],
-    categories: [],
-    subcategories: [],
-    error: undefined,
-  }
-};
-
-  getEvents = async params => {
-    let url = "https://www.eventbriteapi.com/v3/events/search/?location.address=${params.city}&categories=${params.category}&subcategories=${params.subcategory}&sort_by=date&token=${6NWNDLHLOGO6UBJ6FAWS}";
-      try{
-        const response = await axios.get(url);
-        const { events } = response.data;
-          if(events.length>0){
-            this.setState({ events: events,
-                            error: "",
-                          })} else {
-            this.setState({ events: events,
-                            error: "Sorry, there are currently no events listed" })}
-          }
-      catch(err){
-          this.setState({ events: [],
-                          error: "Please enter a valid location",
-                        })
-                      }
-
+  state = {
+    categorias: [],
+    eventos: [],
   };
 
   componentDidMount() {
-  this.getCategories();
+    console.log("Listo");
+    this.obtenerCategorias();
+  }
+
+  obtenerCategorias = async () => {
+    let url = `https://www.eventbriteapi.com/v3/categories/?token=${this.token}&locale=es_ES`;
+
+    await fetch(url)
+      .then((respuesta) => {
+        return respuesta.json();
+      })
+      .then((categorias) => {
+        this.setState({
+          categorias: categorias.categories,
+        });
+      });
+  };
+
+  obtenerEventos = async (busqueda) => {
+    // console.log(busqueda);
+
+    let url = `https://www.eventbriteapi.com/v3/events/search/?q=${busqueda.nombre}&categories=${busqueda.categoria}&sort_by=${this.ordenar}&token=${this.token}&locale=es_ES`;
+    // console.log(url);
+
+    await fetch(url)
+      .then((respuesta) => {
+        return respuesta.json();
+      })
+      .then((eventos) => {
+        // console.log(eventos.events);
+        this.setState({
+          eventos: eventos.events,
+        });
+      });
+  };
+
+  render() {
+    return (
+      <div className="eventos">
+        <div className="navigatorAdmin">
+          <Navigation />
+        </div>
+        <div className="eventos">
+        <EventsForm
+                      categorias={this.state.categorias}
+                      obtenerEventos={this.obtenerEventos}
+          ></EventsForm>
+          <EventList
+                    eventos={this.state.eventos}
+          ></EventList> 
+        </div>
+        <div className="footer">
+          <Footer />
+        </div>
+      </div>
+    );
+  }
 }
 
-getCategories = async () => {
-  let url = "https://www.eventbriteapi.com/v3/categories/?token=${6NWNDLHLOGO6UBJ6FAWS}";
-
-  let response = await axios.get(url);
-  const { categories } = response.data;
-
-  this.setState({
-    categories: categories
-  });
-};
-
-getSubCategories = async categ => {
-  if(categ!==''){
-  let url = "https://www.eventbriteapi.com/v3/categories/${categ}/?token=${6NWNDLHLOGO6UBJ6FAWS}";
-
-  let response = await axios.get(url);
-  const { subcategories } = response.data;
-  this.setState({
-    subcategories: subcategories
-  });
-}
-};
-
-
-render(){
-
-
-  return (
-    <div className="events">
         
-        <EventsForm getEvents={this.getEvents} getSubCategories={this.getSubCategories} categories={this.state.categories} subcategories={this.state.subcategories}/>
-        <EventList events={this.state.events} error={this.state.error} />
-    </div>
-  )};
-}
 
 export default Events;
