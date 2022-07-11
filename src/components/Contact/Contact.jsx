@@ -24,11 +24,11 @@ const Contact = ({onChangePage, previous}) => {
           <div id="container__forms">
             <form id="container__form" method='post' type="submit"> 
               <div id="container__first">
-                <label htmlFor="firstname"><strong>First Name</strong></label>
+                <label htmlFor="firstname"><strong>Nombre</strong></label>
                 <input type="text" id="firstname" name="firstname" placeholder="Enter first name" onChange={handleChange}></input> 
               </div>
               <div id="container__last">
-                <label htmlFor="lastname"><strong>Last Name</strong></label>
+                <label htmlFor="lastname"><strong>Apellidos</strong></label>
                 <input type="text" id="lastname" name="lastname" placeholder="Enter last name" onChange={handleChange}></input>
               </div>
               <div id="container__email">
@@ -36,15 +36,17 @@ const Contact = ({onChangePage, previous}) => {
                 <input type="email" id="email" name="email" placeholder="Enter email" onChange={handleChange}></input>
               </div>
               <div id="container__message">
-                <label htmlFor="message"><strong>Message</strong></label>
+                <label htmlFor="message"><strong>Déjanos un mensaje</strong></label>
                 <textarea id="container__area" type="text"  name="message" maxLength="300" placeholder="Write the reason for the contact in less than 300 characters please" onChange={handleChange}></textarea>
               </div>
               <div id="container__submit">
-                <input type="submit" name="submit" value="Send form" onClick={handleSubmit}></input>
+                <input type="submit" name="submit" value="Enviar" onClick={handleSubmit}></input>
               </div>
             </form>
           </div>
         </div>
+
+        
   )
 }
 

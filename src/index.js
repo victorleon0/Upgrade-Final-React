@@ -10,7 +10,7 @@ import store from "./store";
 import Restaurants from "./pages/Food/Food.jsx";
 import Trips from "./pages/Trips/Trips.jsx";
 import Weather from "./pages/Weather/Weather";
-import Travel from "./pages/Travel/Travel";
+import ContactPage from "./pages/Contact/Contact";
 import Events from "./pages/Events/Events";
 import Login from "./pages/Login/Login.jsx";
 import Admin from "./pages/Admin/Admin.jsx";
@@ -31,7 +31,7 @@ root.render(
           <Route path="/trips" element={<Trips />} />
           <Route path="/events" element={<Events />} />
           <Route path="/weather" element={<Weather />} />
-          <Route path="/travel" element={<Travel />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/users/register" element={<Register />} />
           <Route path="/admin" element={<Admin />} />

@@ -30,8 +30,8 @@ const Navigation = () => {
       <Link to="/weather">
         <button>El tiempo en ...</button>
       </Link>
-      <Link to="/travel">
-        <button className="buttonTravel">¡TRAVEL NOW!</button>
+      <Link to="/contact">
+        <button className="buttonContact">Contacta con nosotros</button>
       </Link>
       <Link to="/login">
       <img className="usericon"

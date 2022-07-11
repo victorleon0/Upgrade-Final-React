@@ -1,3 +1,7 @@
+#container {
+  margin: 0 auto;
+}
+
 #container__forms {
   width: 50%;
   display: -webkit-box;
@@ -17,14 +21,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 1px solid gray;
-  background-color: gray;
+  background-color: #edc97a;
   border-radius: 10px;
   margin-top: 25px;
   margin-bottom: -500px;
   width: 440px;
   height: 425px;
   font-size: 16px;
+  margin-top: 150px;
 }
 
 #container__first, #container__last, #container__email {
@@ -36,8 +40,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 3px;
-  border: 1px solid gray;
-  background-color: gray;
   width: 400px;
   margin-top: 10px;
   margin-left: 15px;

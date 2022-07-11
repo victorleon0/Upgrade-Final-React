@@ -1,4 +1,6 @@
 #container {
+  margin: 0 auto;
+  
     &__forms{
       width: 50%;
       display: flex;
@@ -8,21 +10,19 @@
     &__form{
       display: flex; 
       flex-direction: column;
-      border:1px solid gray;
-      background-color: gray;
+      background-color: rgb(237, 201, 122);
       border-radius: 10px;
       margin-top: 25px; 
       margin-bottom: -500px; 
       width: 440px; 
       height: 425px; 
       font-size: 16px;
+      margin-top: 150px;
     }
     &__first, &__last, &__email{
         display: flex; 
         flex-direction: column; 
         border-radius:3px;
-        border:1px solid gray;
-        background-color: gray;
         width:400px;
         margin-top: 10px;
         margin-left: 15px; 
