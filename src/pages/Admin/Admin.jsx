@@ -9,7 +9,8 @@ const Admin = () => {
         <NavigationAdmin />
       </div>
       <div className="hero-container">
-      <h1 className="title">ADMIN ADMIN</h1>
+      <h1 className="title">¡Bienvenido!</h1>
+      <h4 className="title">Utiliza la barra de navegación para gestionar excursiones y usuarios</h4>
 
       </div>
       <div className="buscadorHome">

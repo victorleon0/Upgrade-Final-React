@@ -1,16 +1,18 @@
 import React from 'react';
 import Footer from '../../components/Footer/Footer';
-import NavigationUser from '../../components/NavigationAdmin/NavigationAdmin';
+import NavigationUser from '../../components/NavigationUser/NavigationUser';
+
 
 const User = () => {
   return (
-    <div className="admin">
-      <div className="navigatorAdmin">
+    <div className="user">
+      <div className="navigatorUser">
         <NavigationUser />
       </div>
       <div className="hero-container">
-      <h1 className="title">USER USER USER</h1>
-
+      <h1 className="title">¡Bienvenido!</h1>
+      <h4 className="title">Utiliza la barra de navegación para gestionar tu perfil y tus compras</h4>
+    
       </div>
       <div className="buscadorHome">
       </div>

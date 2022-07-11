@@ -27,7 +27,9 @@ const getIndividualPokemon = async (url) => {
   
   const getPokemonsList = async() => {
     try {
+
       const res = await fetch("http://localhost:6000/experiences", {mode: 'cors'})
+
       const result = await res.json();
       console.log(result);
       return result.results;

@@ -4,6 +4,8 @@ import Footer from "./components/Footer/Footer.jsx";
 import Searchbar from "./components/Searchbar/Searchbar";
 
 function App() {
+
+  
   return (
     <div className="App">
       <div className="navigator">

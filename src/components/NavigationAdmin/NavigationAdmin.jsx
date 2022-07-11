@@ -13,11 +13,14 @@ const NavigationAdmin = () => {
 
       <div className="linksContainer">
 
-      <Link to="/admin/manage">
+      <Link to="/admin/managetrips">
         <button>Gestionar Excursiones</button>
       </Link>
-      <Link to="/admin/users">
-        <button>Ver usuarios</button>
+      <Link to="/admin/manageusers">
+        <button>Gestionar Usuarios</button>
+      </Link>
+      <Link to="/admin/adduser">
+        <button>Añadir Usuarios</button>
       </Link>
       <Link to="/">
         <button>Salir de Admin</button>

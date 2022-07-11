@@ -40,7 +40,7 @@ const Navigation = () => {
         alt="User"
       />
       </Link>
-      <Link to="/register">
+      <Link to="/users/register">
       <img className="usericon"
         width="50px"
         src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
