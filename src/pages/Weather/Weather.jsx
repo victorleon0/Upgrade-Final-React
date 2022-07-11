@@ -4,23 +4,22 @@ import WeatherComponent from "../../components/WeatherComponent/WeatherComponent
 import Footer from "../../components/Footer/Footer.jsx";
 
 
-import "./Weather.scss";
 
 const Weather = () => {
  
 
   return (
-    <div className="container">
-      <div className="navigator">
+    <div className="contact">
+      <div className="navigation">
         <Navigation />
       </div>
-      <div className="Weather">
-        <WeatherComponent/>
+      <div className="contact-container">
+      <WeatherComponent/>
+
       </div>
       <div className="footer">
-        <Footer/>
+        <Footer />
       </div>
-      
     </div>
   );
 };

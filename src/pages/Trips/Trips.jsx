@@ -1,22 +1,24 @@
 import React from "react";
 import Navigation from "../../components/Navigation/Navigation.jsx";
+import ExperiencesList from "../../components/Experiences/ExperiencesList.jsx";
+import Footer from "../../components/Footer/Footer"
 
 
-import "./Trips.scss";
 
 const Trips = () => {
-  
+ 
 
   return (
-    <div className="container">
-      <div className="navigator">
+    <div className="trips">
+      <div className="navigation">
         <Navigation />
       </div>
-      <div className="searchbar">
-      
-      <h1>Excursiones</h1>
+      <div className="contact-container">
+      <ExperiencesList/>
 
-      
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );
