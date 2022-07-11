@@ -1,14 +1,24 @@
 import React from "react";
 import { useState } from "react";
 import "./Register.scss";
-import Navigation from "../../components/Navigation/Navigation";
 
-const Register = (prop) => {
+const Register = (/* prop */) => {
   const [form, setForm] = useState({ email: "", password: "" });
 
   const submitRegister = (ev) => {
     ev.preventDefault();
-    prop.registerUser(form);
+    /* prop.registerUser(form); */
+    console.log(form)
+    fetch('http://localhost:6022/users/register', {
+      method: 'POST', // or 'PUT'
+      body: JSON.stringify(form), // data can be `string` or {object}!
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      credentials: 'same-origin'
+    }).then(res => res.json())
+    .catch(error => console.error('Error:', error))
+    .then(response => console.log('Success:', response));
   };
 
 
@@ -26,13 +36,13 @@ const Register = (prop) => {
     
 
   return (
-    <div class="login">
+    <div className="login">
       <div className="navigator">
         {/* <Navigation /> */}
       </div>
       <div className="formContainer">
         <h4>Regístrate</h4>
-        <form onSubmit={submitRegister} method="post" action="http://localhost:6000/users/register">
+        <form onSubmit={submitRegister}>
           <input
             type="email"
             name="email"
@@ -42,7 +52,7 @@ const Register = (prop) => {
           <input
             type="password"
             name="password"
-            class="password form-control"
+            className="password form-control"
             placeholder="Password"
             onChange={handleInput}
           />
