@@ -18,9 +18,17 @@ const Login = () => {
       },
       credentials: 'same-origin'
     }).then(res => res.json())
-    .then(res => {console.log('Success:', res); alert('Login Correcto'); navigate('/user') })
-
+    
     .catch(error => console.error('Error:', error))
+    .then(resesponse => {
+      console.log(resesponse.role);
+      if (resesponse.role === 'admin') {
+        navigate('/admin')
+      } else {
+        navigate('/user')
+      }
+      //console.log('Success:', resesponse); alert('Login Correcto'); navigate('/user')
+    })
   };
 
   const handleInput = (ev) =>
@@ -36,9 +44,9 @@ const Login = () => {
         <form onSubmit={submitLogin}>
           <input
             type="text"
-            name="username"
+            name="email"
             className="username form-control"
-            placeholder="Username"
+            placeholder="Email"
             onChange={handleInput}
           />
           <input
