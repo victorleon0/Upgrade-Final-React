@@ -2,13 +2,14 @@ import React from "react";
 import { useState } from "react";
 import "./Register.scss";
 import Navigation from '../../components/Navigation/Navigation'
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate()
   const [form, setForm] = useState({ email: "", password: "" });
 
   const submitRegister = (ev) => {
     ev.preventDefault();
-    console.log(form)
     fetch('http://localhost:6022/users/register', {
       method: 'POST', // or 'PUT'
       body: JSON.stringify(form), // data can be `string` or {object}!
@@ -16,9 +17,10 @@ const Register = () => {
         'Content-Type': 'application/json'
       },
       credentials: 'same-origin'
-    }).then(res => res.json())
+    }).then(res => res.json(), alert('Cuenta Registrada'), navigate('/login'))
     .catch(error => console.error('Error:', error))
-    .then(response => console.log('Success:', response));
+   // .then(response => alert('Cuenta Registrada'), navigate('/login'))//console.log('Success:', response));
+
   };
 
 
@@ -74,4 +76,5 @@ const Register = () => {
 export default Register;
 
 
-// Falta que se borren los campos, que te salga un mensaje de registrado y arreglar la barra de navegación
+
+// arreglar la barra de navegación
