@@ -1,10 +1,10 @@
-const PokemonCard = ({pokemon}) => {
+const ExperiencesCard = ({experiences}) => {
   return (
-    <li className="card" key={pokemon.name}>
-      <img src={pokemon.image} alt={pokemon.name} />
-      <p className="card-title">{pokemon.name}</p>
+    <li className="card" key={experience.name}>
+      <img src={experience.image} alt={experience.name} />
+      <p className="card-title">{experience.name}</p>
       <div className="card-subtitle">
-        {pokemon.type[0]} {pokemon.type[1] ? `, ${pokemon.type[1]}` : ""}
+        {experience.type[0]} {experience.type[1] ? `, ${experience.type[1]}` : ""}
         {/* 
         {user.role === "admin" ? (<button>Edit Experience</button>) : null} 
 
@@ -17,4 +17,4 @@ const PokemonCard = ({pokemon}) => {
   );
 };
 
-export default PokemonCard;
+export default ExperiencesCard;
