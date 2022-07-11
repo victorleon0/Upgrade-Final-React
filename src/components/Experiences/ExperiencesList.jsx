@@ -6,7 +6,7 @@ const ExperiencesList = () => {
     const [experiences, setExperiences] = useState([]);
 
      const getExperiences = async() =>{
-        const res = await axios("https://localhost:6022/experiences");
+        const res = await axios("https://localhost:6022/experiences/$62c7ca13bbb43676ebc64ac7");
         setExperiences(res.data)
      }
 
@@ -18,7 +18,8 @@ const ExperiencesList = () => {
     <div>
         {experiences.length > 0 && experiences.map((experience) => {
             return (
-                <Link to={`/experience/${experience.id}`}><img src={experience.imagen} alt={experience.titulo} /></Link>
+                <Link to={`/experience/${experience.titulo}`}>
+                <img src={experience.imagen} alt={experience.titulo} /></Link>
             )
         })}
     </div>

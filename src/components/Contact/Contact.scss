@@ -13,11 +13,10 @@
       background: linear-gradient(to bottom right,#f8df7b,#B05574);
       border-radius: 10px;
       margin-top: 25px; 
-      margin-bottom: -500px; 
       width: 440px; 
       height: 425px; 
       font-size: 16px;
-      margin-top: 150px;
+      margin-top: 80px;
     }
     &__first, &__last, &__email{
         display: flex; 
@@ -37,9 +36,9 @@
     }
     &__submit {
         border-radius:5px;
-        border:1px solid black;
+        border:1px solid rgb(175, 72, 72);
         color: white;
-        background-color: black;
+        background-color: rgb(100, 21, 21);
         width: 87%; 
         height: 30px; 
         margin-top: 10px; 
@@ -47,9 +46,9 @@
         margin-left: 25px; 
         input{
             width: 100%;
-            border:1px solid black;
+            border:1px solid rgb(105, 15, 15);
             color: white;
-            background-color: black;
+            background-color: rgb(104, 5, 5);
             font-size: 14px; 
             margin-top: 5px; 
             cursor: pointer; 

@@ -15,14 +15,7 @@ const Searchbar = (e) => {
       </Link>
       
       <input id="input-search" type="text" placeholder="¿Dónde vamos?" />
-      <button className="geolocationButton">
-        <img
-          width="20px"
-          height="20px"
-          src="https://cdn-icons-png.flaticon.com/512/96/96615.png"
-          alt="geolocation img"
-        ></img>
-      </button>
+      
     </div>
   );
 };

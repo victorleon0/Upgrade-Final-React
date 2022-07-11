@@ -25,11 +25,10 @@
   background: linear-gradient(to bottom right, #f8df7b, #B05574);
   border-radius: 10px;
   margin-top: 25px;
-  margin-bottom: -500px;
   width: 440px;
   height: 425px;
   font-size: 16px;
-  margin-top: 150px;
+  margin-top: 80px;
 }
 
 #container__first, #container__last, #container__email {
@@ -57,9 +56,9 @@
 
 #container__submit {
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid #af4848;
   color: white;
-  background-color: black;
+  background-color: #641515;
   width: 87%;
   height: 30px;
   margin-top: 10px;
@@ -69,9 +68,9 @@
 
 #container__submit input {
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid #690f0f;
   color: white;
-  background-color: black;
+  background-color: #680505;
   font-size: 14px;
   margin-top: 5px;
   cursor: pointer;

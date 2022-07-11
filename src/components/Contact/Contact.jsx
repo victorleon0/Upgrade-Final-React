@@ -25,15 +25,15 @@ const Contact = ({onChangePage, previous}) => {
             <form id="container__form" method='post' type="submit"> 
               <div id="container__first">
                 <label htmlFor="firstname"><strong>Nombre</strong></label>
-                <input type="text" id="firstname" name="firstname" placeholder="Enter first name" onChange={handleChange}></input> 
+                <input type="text" id="firstname" name="firstname" placeholder="Nombre" onChange={handleChange}></input> 
               </div>
               <div id="container__last">
                 <label htmlFor="lastname"><strong>Apellidos</strong></label>
-                <input type="text" id="lastname" name="lastname" placeholder="Enter last name" onChange={handleChange}></input>
+                <input type="text" id="lastname" name="lastname" placeholder="Apellidos" onChange={handleChange}></input>
               </div>
               <div id="container__email">
                 <label htmlFor="email"><strong>Email</strong></label>
-                <input type="email" id="email" name="email" placeholder="Enter email" onChange={handleChange}></input>
+                <input type="email" id="email" name="email" placeholder="Email" onChange={handleChange}></input>
               </div>
               <div id="container__message">
                 <label htmlFor="message"><strong>Déjanos un mensaje</strong></label>

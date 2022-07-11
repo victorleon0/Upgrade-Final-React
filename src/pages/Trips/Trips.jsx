@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "../../components/Navigation/Navigation.jsx";
-import ExperiencesList from "../../components/Experiences/ExperiencesList.jsx";
+import ExperiencesAll from "../../components/Experiences/ExperiencesAll";
+import ExperiencesList from "../../components/Experiences/ExperiencesList"
 import Footer from "../../components/Footer/Footer"
 
 
@@ -14,6 +15,7 @@ const Trips = () => {
         <Navigation />
       </div>
       <div className="contact-container">
+      <ExperiencesAll/>
       <ExperiencesList/>
 
       </div>
