@@ -13,15 +13,10 @@
     text-align: center;
 }
 
-.title {
-    float: left;
-    width:100%;
-    color: grey;
-}
+
 
 
 .edit {
-  background-color: #e7e7e7;
   color: black;
   padding: 12px 20px;
   width: 70px;
