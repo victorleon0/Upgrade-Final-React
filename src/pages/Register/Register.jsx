@@ -1,13 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import "./Register.scss";
+import Navigation from '../../components/Navigation/Navigation'
 
-const Register = (/* prop */) => {
+const Register = () => {
   const [form, setForm] = useState({ email: "", password: "" });
 
   const submitRegister = (ev) => {
     ev.preventDefault();
-    /* prop.registerUser(form); */
     console.log(form)
     fetch('http://localhost:6022/users/register', {
       method: 'POST', // or 'PUT'
@@ -72,3 +72,6 @@ const Register = (/* prop */) => {
 };
 
 export default Register;
+
+
+// Falta que se borren los campos, que te salga un mensaje de registrado y arreglar la barra de navegación
