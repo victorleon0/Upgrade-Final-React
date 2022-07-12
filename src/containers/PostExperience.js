@@ -3,7 +3,7 @@ import ProfileForm from "../components/ExperiencesAdmin/ExperienceForm/Experienc
 const PostExperience = () => {
   return (
     <div>
-      <ProfileForm onSubmit={this.addExperience} onClick={"/admin/manageexperiences"} />
+      <ProfileForm/>
     </div>
   );
 };

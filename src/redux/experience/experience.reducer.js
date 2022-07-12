@@ -1,4 +1,4 @@
-import * as actions from './experience.actions';
+import * as actions from "./experience.actions";
 
 const initialState = {
   experiences: [],
@@ -8,30 +8,37 @@ const experienceReducer = (state = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {
-    case actions.ADD_EXPERIENCE:
+    case actions.ADD_EXPERIENCE: {
       return state.concat({
         ...payload,
         id: new Date(),
       });
+    }
 
-    case actions.DELETE_EXPERIENCE:
-      return state.filter((experience) => experience.id !== payload);
+    case actions.DELETE_EXPERIENCE: {
+      const experiences = state.filter((experience) => experience.id !== payload);
+      return { ...state, experiences };
+    }
 
-    case actions.EDIT_EXPERIENCE:
-      return state.map((experience) =>
-        experience.id === payload ? { ...experience, editing: !experience.editing } : experience
-      );
-
-    case actions.CREATE_EXPERIENCE:
-      return state.map((experience) => {
-        if (experience.id === payload.id) {
-          return {
-            ...experience,
-            ...payload,
-            editing: !experience.editing,
-          };
-        } else return experience;
+    case actions.EDIT_EXPERIENCE: {
+      const experiences = state.experiences.map((exp) => {
+        if (exp.id !== payload.id) return exp;
+        return {
+          ...exp,
+          ...payload,
+        };
       });
+      return { ...state, experiences };
+    }
+
+    case actions.CREATE_EXPERIENCE: {
+      return { ...state, experience: [...state.experiences, payload] };
+    }
+
+    case actions.GET_ALL_EXPERIENCES: {
+      return { ...state, experiences: payload };
+    }
+
     default:
       return state;
   }

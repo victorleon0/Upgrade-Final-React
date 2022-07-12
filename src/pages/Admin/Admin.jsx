@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect} from "react";
+import { useDispatch } from "react-redux";
 import Footer from "../../components/Footer/Footer";
 import NavigationAdmin from "../../components/NavigationAdmin/NavigationAdmin";
+import { getAllExperiences } from "../../redux/experience/experience.actions";
 
 const Admin = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllExperiences());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div className="admin">
       <div className="navigatorAdmin">

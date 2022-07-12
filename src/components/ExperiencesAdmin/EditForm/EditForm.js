@@ -22,7 +22,7 @@ const EditComponent = (props) => { // <EditComponente experience={experience} />
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label for="title">Titulo</label>
+        <label htmlFor="title">Titulo</label>
         <input
           id="title"
           type="text"
@@ -33,7 +33,7 @@ const EditComponent = (props) => { // <EditComponente experience={experience} />
         />
         <br />
         <br />
-        <label for="image">Picture</label>
+        <label htmlFor="image">Picture</label>
         <input
           id="image"
           type="text"
@@ -44,7 +44,7 @@ const EditComponent = (props) => { // <EditComponente experience={experience} />
         />
         <br />
         <br />
-        <label for="subtitle">Subtitulo</label>
+        <label htmlFor="subtitle">Subtitulo</label>
         <input
           id="subtitle"
           type="text"
@@ -55,7 +55,7 @@ const EditComponent = (props) => { // <EditComponente experience={experience} />
         />
         <br />
         <br />
-        <label for="price">Precio</label>
+        <label htmlFor="price">Precio</label>
         <input id="price" type="text" placeholder="price" value={form.price} onChange={handleChange} name="price" />
         <br />
         <br />

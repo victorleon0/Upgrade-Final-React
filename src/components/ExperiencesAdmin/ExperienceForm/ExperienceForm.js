@@ -4,11 +4,10 @@ import { createExperience } from "../../../redux/experience/experience.actions";
 import "./ExperienceForm.scss";
 
 const INITIAL_STATE = {
-  name: "",
-  picture: "",
-  email: "",
-  message: "",
-  editing: false,
+  title: "",
+  image: "",
+  subtitle: "",
+  price: "",
 };
 
 const ExperienceForm = () => {
@@ -32,7 +31,7 @@ const ExperienceForm = () => {
         <h1>Add Excursion</h1>
 
         <form onSubmit={handleSubmit}>
-          <label for="title">Titulo</label>
+          <label htmlFor="title">Titulo</label>
           <input
             id="title"
             type="text"
@@ -43,7 +42,7 @@ const ExperienceForm = () => {
           />
           <br />
           <br />
-          <label for="image">Picture</label>
+          <label htmlFor="image">Picture</label>
           <input
             id="image"
             type="text"
@@ -54,7 +53,7 @@ const ExperienceForm = () => {
           />
           <br />
           <br />
-          <label for="subtitle">Subtitulo</label>
+          <label htmlFor="subtitle">Subtitulo</label>
           <input
             id="subtitle"
             type="text"
@@ -65,7 +64,7 @@ const ExperienceForm = () => {
           />
           <br />
           <br />
-          <label for="price">Precio</label>
+          <label htmlFor="price">Precio</label>
           <input
             id="price"
             type="text"

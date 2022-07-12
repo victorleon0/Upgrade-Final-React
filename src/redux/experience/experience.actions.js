@@ -1,9 +1,15 @@
 import axios from "axios";
 import { experienceUrl } from "../../helpers/url.helper";
+export const GET_ALL_EXPERIENCES = "GET_ALL_EXPERIENCES";
 export const ADD_EXPERIENCE = "ADD_EXPERIENCE";
 export const DELETE_EXPERIENCE = "DELETE_EXPERIENCE";
 export const EDIT_EXPERIENCE = "EDIT_EXPERIENCE";
 export const CREATE_EXPERIENCE = "CREATE_EXPERIENCE";
+
+export const getAllExperiences = () => async dispatch => {
+  const res = await axios(experienceUrl);
+  dispatch({ type: GET_ALL_EXPERIENCES, payload: res.data });
+}
 
 export const addExperience = (data) => async (dispatch) => {
   const res = await axios.post(experienceUrl, data);

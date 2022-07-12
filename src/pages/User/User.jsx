@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import Footer from "../../components/Footer/Footer";
 import NavigationUser from "../../components/NavigationUser/NavigationUser";
+import { getAllExperiences } from "../../redux/experience/experience.actions";
 
 const User = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllExperiences());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div className="user">
       <div className="navigatorUser">
