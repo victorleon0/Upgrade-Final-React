@@ -63,7 +63,7 @@ const ExperiencesAll = () => {
 
                     <div className="actions">
                       <div className="button bg-green c-white">
-                      <Link to={`/editexperience/${experience._id}`}><button>Modificar</button></Link>
+                      <Link to={`/experiences/${experience._id}`}><button>Modificar</button></Link>
                     
                       </div>
                       <div className="buttonDelete">

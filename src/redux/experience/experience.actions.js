@@ -31,15 +31,13 @@ export const deleteExperience = (experience) => async (dispatch) => {
 };
 
 
-export const editExperience = (experience, cb) => async (dispatch) => {
-  const res = await axios.put(`${experienceUrl}/${experience._id}`, experience);
-
+export const editExperience = (editExperience, id) => async (dispatch) => {
+  const res = await axios.put(`${experienceUrl}/${id}`, editExperience);
   dispatch({
     type: EDIT_EXPERIENCE,
-    payload: res.data,
+    payload: {editExperience, res},
   });
 
-  setTimeout(() => cb(), 500);
 };
 
 export const createExperience = (data) => async (dispatch) => {

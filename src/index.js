@@ -16,9 +16,9 @@ import Register from "./pages/Register/Register.jsx";
 import User from "./pages/User/User.jsx";
 import ManageExperiences from "./pages/Admin/ManageExperiences.jsx";
 import AddExperiences from "./pages/Admin/AddExperience.jsx";
-import EditExperiences from "./pages/Admin/EditExperience";
 import UserEdit from "./pages/User/UserEdit";
 import Logout from "./pages/Logout/Logout";
+import EditExperience from "./pages/Admin/EditExperience";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -36,10 +36,10 @@ root.render(
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/manageexperiences" element={<ManageExperiences />} />
           <Route path="/admin/addexperiences" element={<AddExperiences />} />
-          <Route path="/admin/editexperiences" element={<EditExperiences />} />
           <Route path="/user" element={<User />} />
           <Route path="/user/edit" element={<UserEdit />} />
           <Route path="/logout" element={<Logout />} />
+          <Route path="/experiences/:id" element={<EditExperience />} />
         </Routes>
       </React.StrictMode>
     </Router>
