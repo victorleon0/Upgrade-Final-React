@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import "./Login.scss";
-import Navigation from "../../components/Navigation/Navigation";
+//import Navigation from "../../components/Navigation/Navigation";
+import Searchbar from "../../components/Searchbar/Searchbar";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -37,8 +38,9 @@ const Login = () => {
   return (
     <div className="login">
       <div className="navigator">
-         <Navigation /> 
+         <Searchbar />
       </div>
+      <img className="backroundImage" src="https://i.pinimg.com/originals/9e/c2/d5/9ec2d5ce4f42ccc310f13f1c0f53d295.jpg" alt="Backround"></img>
       <div className="formContainer">
         <h4>Login</h4>
         <form onSubmit={submitLogin}>

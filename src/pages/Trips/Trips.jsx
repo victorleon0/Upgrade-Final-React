@@ -14,6 +14,7 @@ const Trips = () => {
         <Navigation />
       </div>
       <div className="contact-container">
+      <img className="backroundImage" src="https://ep01.epimg.net/elviajero/imagenes/2022/02/08/album/1644345991_870499_1644410756_noticia_normal.jpg" alt="Backround"></img>
       <ExperiencesAll/>
       
 

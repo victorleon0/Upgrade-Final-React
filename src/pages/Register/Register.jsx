@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./Register.scss";
-import Navigation from "../../components/Navigation/Navigation";
+import Searchbar from "../../components/Searchbar/Searchbar";
 
 const Register = (/* prop */) => {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -39,8 +39,9 @@ const Register = (/* prop */) => {
   return (
     <div className="register">
       <div className="navigator">
-      <Navigation />
+      <Searchbar />
       </div>
+      <img className="backroundImage" src="https://i.pinimg.com/originals/9e/c2/d5/9ec2d5ce4f42ccc310f13f1c0f53d295.jpg" alt="Backround"></img>
       <div className="formContainer">
         <h4>Regístrate</h4>
         <form onSubmit={submitRegister}>

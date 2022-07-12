@@ -22,7 +22,7 @@ const NavigationAdmin = () => {
       <Link to="/admin/adduser">
         <button>Añadir Usuarios</button>
       </Link>
-      <Link to="/">
+      <Link to="/logout">
         <button>Salir de Admin</button>
       </Link>
       

@@ -19,6 +19,7 @@ import User from "./pages/User/User.jsx";
 import ManageUsers from "./pages/Admin/ManageUsers.jsx";
 import AddUser from "./pages/Admin/AddUser.jsx";
 import UserEdit from "./pages/User/UserEdit";
+import Logout from "./pages/Logout/Logout";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -39,6 +40,7 @@ root.render(
           <Route path="/admin/adduser" element={<AddUser />} />
           <Route path="/user" element={<User />} />
           <Route path="/user/edit" element={<UserEdit />} />
+          <Route path="/logout" element={<Logout />} />
         </Routes>
       </React.StrictMode>
     </Router>

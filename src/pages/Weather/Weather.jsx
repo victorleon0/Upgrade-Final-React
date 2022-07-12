@@ -14,6 +14,7 @@ const Weather = () => {
         <Navigation />
       </div>
       <div className="contact-container">
+      <img className="backroundImage" src="https://www.grecia.info/es/wp-content/uploads/sites/49/el-tiempo.jpg" alt="Backround"></img>
       <WeatherComponent/>
 
       </div>

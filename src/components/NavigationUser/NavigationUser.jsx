@@ -19,7 +19,7 @@ const NavigationUser = () => {
       <Link to="/user/edit">
         <button>Editar Perfil</button>
       </Link>
-      <Link to="/">
+      <Link to="/logout">
         <button>Salir</button>
       </Link>
       
