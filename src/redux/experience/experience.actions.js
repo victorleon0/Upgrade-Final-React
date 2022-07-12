@@ -1,11 +1,12 @@
 import axios from "axios";
+import { experienceUrl } from "../../helpers/url.helper";
 export const ADD_EXPERIENCE = "ADD_EXPERIENCE";
 export const DELETE_EXPERIENCE = "DELETE_EXPERIENCE";
 export const EDIT_EXPERIENCE = "EDIT_EXPERIENCE";
-export const UPDATE_EXPERIENCE = "UPDATE_EXPERIENCE";
+export const CREATE_EXPERIENCE = "CREATE_EXPERIENCE";
 
 export const addExperience = (data) => async (dispatch) => {
-  const res = await axios.post("http://localhost:6022/experiences", data);
+  const res = await axios.post(experienceUrl, data);
   const experience = res.data;
   dispatch({
     type: ADD_EXPERIENCE,
@@ -14,28 +15,26 @@ export const addExperience = (data) => async (dispatch) => {
 };
 
 export const deleteExperience = (id) => async (dispatch) => {
-  const res = await axios.delete("http://localhost:6022/experiences/");
-  const id = res.data;
-  dispatch({
-    type: DELETE_EXPERIENCE,
-    payload: id,
-  });
+  await axios.delete(`${experienceUrl}/${id}`);
+  dispatch({ type: DELETE_EXPERIENCE });
 };
 
-export const editExperience = (id) => async (dispatch) => {
-  const res = await axios.put("http://localhost:6022/experiences/id");
-  const id = res.data;
+export const editExperience = (experience, cb) => async (dispatch) => {
+  const res = await axios.put(`${experienceUrl}/${experience.id}`, experience);
+
   dispatch({
     type: EDIT_EXPERIENCE,
-    payload: id,
+    payload: res.data,
   });
+
+  setTimeout(() => cb(), 500);
 };
 
-export const updateExperience = (data) => async (dispatch) => {
-  const res = await axios.post("http://localhost:6022/experiences");
-  const id = res.data;
+export const createExperience = (data) => async (dispatch) => {
+  const res = await axios.post(experienceUrl, data);
+  
   dispatch({
-    type: UPDATE_EXPERIENCE,
-    payload: id,
+    type: CREATE_EXPERIENCE,
+    payload: res.data,
   });
 };

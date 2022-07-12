@@ -9,14 +9,10 @@ const Contact = ({ onChangePage, previous }) => {
     email: "",
     message: "",
   });
-  const handleChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    // console.log(value, name);
-    // console.log(e.target);
-    setContactForm((previous) => {
-      return { ...previous, [name]: value };
-    });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setContactForm({ ...contactForm, [name]: value });
   };
 
   const handleSubmit = (e) => {

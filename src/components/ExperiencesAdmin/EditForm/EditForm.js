@@ -1,78 +1,68 @@
-import React, { Component } from 'react'
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { editExperience } from "../../../redux/experience/experience.actions";
 
-export default class EditComponent extends Component {
-  state = {
-    id: this.props.profile.id
-  }
+const EditComponent = (props) => { // <EditComponente experience={experience} />
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [form, setForm] = useState(props.experience);
 
-  handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    this.props.onSubmit(this.state)
-    this.setState({
-      name: '',
-      picture: '',
-      email: '',
-      messgae: ''
-    })
-  }
+    const cb = navigate("/");
+    dispatch(editExperience(form, cb));
+  };
 
-  handleChange = (e) => {
-    this.setState({
-        [e.target.name]: e.target.value
-      });
-  }
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setForm({ ...form, [name]: value });
+  };
 
-  render() {
-    return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <label for="title">Titulo</label>
-          <input
-            id="title"
-            type="text"
-            placeholder="Título de la ewxperiencia"
-            value={this.state.title}
-            onChange={this.handleChange}
-            name="title"
-            />
-            <br />
-            <br />
-          <label for="image">Picture</label>
-          <input
-            id="image"
-            type="text"
-            placeholder="Introduce la URL de la image"
-            value={this.state.image}
-            onChange={this.handleChange}
-            name="image"
-            />
-            <br />
-            <br />
-          <label for="subtitle">Subtitulo</label>
-          <input
-            id="subtitle"
-            type="text"
-            placeholder="subtitle"
-            value={this.state.subtitle}
-            onChange={this.handleChange}
-            name="subtitle"
-            />
-            <br />
-            <br />
-          <label for="price">Precio</label>
-          <input
-            id="price"
-            type="text"
-            placeholder="price"
-            value={this.state.price}
-            onChange={this.handleChange}
-            name="price"
-            />
-            <br />
-            <br />
-            <button>UPDATE</button>
-        </form>
-      </div>
-    )
-  }
-}
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label for="title">Titulo</label>
+        <input
+          id="title"
+          type="text"
+          placeholder="Título de la ewxperiencia"
+          value={form.title}
+          onChange={handleChange}
+          name="title"
+        />
+        <br />
+        <br />
+        <label for="image">Picture</label>
+        <input
+          id="image"
+          type="text"
+          placeholder="Introduce la URL de la image"
+          value={form.image}
+          onChange={handleChange}
+          name="image"
+        />
+        <br />
+        <br />
+        <label for="subtitle">Subtitulo</label>
+        <input
+          id="subtitle"
+          type="text"
+          placeholder="subtitle"
+          value={form.subtitle}
+          onChange={handleChange}
+          name="subtitle"
+        />
+        <br />
+        <br />
+        <label for="price">Precio</label>
+        <input id="price" type="text" placeholder="price" value={form.price} onChange={handleChange} name="price" />
+        <br />
+        <br />
+        <button>UPDATE</button>
+      </form>
+    </div>
+  );
+};
+
+export default EditComponent;

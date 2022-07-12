@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import EditForm from "../components/ExperiencesAdmin/EditForm/EditForm.js";
-import { updateExperience } from "../redux/experience/experience.actions";
+import { createExperience } from "../redux/experience/experience.actions";
 import { connect } from "react-redux";
 
 class EditContainer extends Component {
   handleUpdate = (data) => {
-    this.props.updateExperience(data);
+    this.props.createExperience(data);
   };
 
   render() {
@@ -17,4 +17,4 @@ class EditContainer extends Component {
   }
 }
 
-export default connect(null, { updateExperience })(EditContainer);
+export default connect(null, { createExperience })(EditContainer);

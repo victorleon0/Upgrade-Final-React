@@ -1,0 +1,1 @@
+export const experienceUrl = "http://localhost:6022/experiences";

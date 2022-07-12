@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import "./ExperiencesAll.scss";
+import { experienceUrl } from "../../helpers/url.helper";
 
 const ExperiencesAll = () => {
   const [experiences, setExperiences] = useState([]);
+
   useEffect(() => {
     const getExperiences = async () => {
       try {
-        const res = await axios("http://localhost:6022/experiences");
-        console.log(res);
-        // const {info, results} = await res.json(); //  Fetch
+        const res = await axios(experienceUrl);
         setExperiences(res.data);
       } catch (error) {
         console.log("Error en petición", error);
