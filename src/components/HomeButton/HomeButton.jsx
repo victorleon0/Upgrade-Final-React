@@ -1,8 +1,7 @@
-import React from "react";
-import "./HomeButton.scss";
 import { Link } from "react-router-dom";
+import "./HomeButton.scss";
 
-const HomeButton = (e) => {
+const HomeButton = () => {
   return (
     <div className="input-container">
       <Link to="/">

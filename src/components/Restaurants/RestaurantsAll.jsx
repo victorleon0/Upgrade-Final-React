@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
+import { restaurantUrl } from '../../helpers/url.helper';
 import "./RestaurantsAll.scss";
 
 const RestaurantsAll = () => {
   const [restaurants, setRestaurants] = useState([]);
+
   useEffect(() => {
     const getRestaurants = async () => {
       try {
-        const res = await axios("http://localhost:6022/restaurants");
-        console.log(res);
-        // const {info, results} = await res.json(); //  Fetch
+        const res = await axios(restaurantUrl);
         setRestaurants(res.data);
       } catch (error) {
         console.log("Error en petición", error);

@@ -1,6 +1,5 @@
-import React from "react";
-import "./NavigationUser.scss";
 import { Link } from "react-router-dom";
+import "./NavigationUser.scss";
 
 const NavigationUser = () => {
   return (

@@ -1,7 +1,7 @@
 import * as actions from './experience.actions';
 
 const initialState = {
-
+  experiences: [],
 };
 
 const experienceReducer = (state = initialState, action) => {

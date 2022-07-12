@@ -1,6 +1,5 @@
-import React from "react";
-import "./NavigationAdmin.scss";
 import { Link } from "react-router-dom";
+import "./NavigationAdmin.scss";
 
 const NavigationAdmin = () => {
   return (

@@ -1,21 +1,10 @@
 import React, { useState } from "react";
-import "./WeatherComponent.scss";
 import { fetchweather } from "../../api/axiosweather.api";
+import "./WeatherComponent.scss";
 
 const WeatherComponent = () => {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
-  // const [errorMessage, setErrorMessage] = useState();
-
-  // const dateBuild = (d) => {
-  //   let date = String(new window.Date());
-  //   date = date.slice(3, 15);
-  //   return date;
-  // };
-
-  // const handleClick = () => {
-  //   setErrorMessage("Please enter the correct city name!");
-  // };
 
   const search = async (event) => {
     if (event.key === "Enter") {
@@ -39,11 +28,9 @@ const WeatherComponent = () => {
         onChange={(event) => setQuery(event.target.value)}
         onKeyPress={search}
       />
-      {/* {errorMessage && <div className="error"> {errorMessage} </div>} */}
       {weather.main && (
         <div className="city">
           <div className="date"> {new Date().toDateString("en-US")}</div>
-          {/* <div className="date"> {new Date().toDateString("en-us")}</div> */}
 
           <h2 className="city-name">
             <span>{weather.name}</span>

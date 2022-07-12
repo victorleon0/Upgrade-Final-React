@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Searchbar from "../Searchbar/Searchbar.jsx";
 import "./Navigation.scss";
@@ -10,7 +9,8 @@ const Navigation = () => {
         <Searchbar />
       </div>
       <div className="linksContainer">
-        <Link to="/"></Link>
+        <Link to="/">Home</Link>
+
         <Link to="/food">
           <button>¿Donde comer?</button>
         </Link>
