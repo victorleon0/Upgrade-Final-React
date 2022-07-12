@@ -9,7 +9,6 @@ const ExperiencesAll = () => {
     const getExperiences = async () => {
       try {
         const res = await axios("http://localhost:6022/experiences");
-        console.log(res);
         // const {info, results} = await res.json(); //  Fetch
         setExperiences(res.data);
       } catch (error) {
@@ -19,7 +18,6 @@ const ExperiencesAll = () => {
 
     getExperiences();
   }, []);
-
   return (
     <>
       <h4>Reserva ahora tu experiencia y disfruta de un descuento único</h4>
@@ -28,7 +26,7 @@ const ExperiencesAll = () => {
           experiences.length > 0 &&
           experiences.map((experience) => {
             return (
-              <div className="experience" key={experience.id}>
+              <div className="experience" key={experience._id}>
                 <img
                   className="image"
                   src={experience.imagen}
@@ -44,6 +42,9 @@ const ExperiencesAll = () => {
                 <div className="language">
                   Lang: <strong>{experience.idioma}</strong>
                 </div>
+                <a href="/experiences/{experiences._id}">
+                  <button>Editar</button>
+                </a>
                 <a href="/login">
                   <button>¡Reserva ahora!</button>
                 </a>

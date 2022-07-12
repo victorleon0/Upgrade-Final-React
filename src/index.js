@@ -9,6 +9,7 @@ import store from "./store";
 
 import Restaurants from "./pages/Food/Food.jsx";
 import Trips from "./pages/Trips/Trips.jsx";
+import FormTrips from "./pages/Trips/FormTrips.jsx";
 import Weather from "./pages/Weather/Weather";
 import ContactPage from "./pages/Contact/Contact";
 import Events from "./pages/Events/Events";
@@ -39,6 +40,7 @@ root.render(
           <Route path="/admin/adduser" element={<AddUser />} />
           <Route path="/user" element={<User />} />
           <Route path="/user/edit" element={<UserEdit />} />
+          <Route path="/experiences/:id" element={<FormTrips />} />
         </Routes>
       </React.StrictMode>
     </Router>
