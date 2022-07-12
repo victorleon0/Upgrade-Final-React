@@ -1,5 +1,7 @@
-import profiles from './profiles.js'
+import experiences from './experiences.js'
+import restaurants from './restaurants.js'
 
 export default {
-  profiles
+  experiences,
+  restaurants
 }

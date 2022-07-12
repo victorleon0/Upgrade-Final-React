@@ -1,16 +1,17 @@
 import React from 'react';
 import Footer from '../../components/Footer/Footer';
 import NavigationAdmin from '../../components/NavigationAdmin/NavigationAdmin';
-import ProfileList from '../../containers/ProfileList';
+import PostExperience from '../../containers/PostExperience';
 
-const ManageUsers = () => {
+const ManageExperiences = () => {
   return (
     <div className="admin">
     <div className="navigatorAdmin">
       <NavigationAdmin />
     </div>
     <div className="users-container">
-    <ProfileList/>
+    <PostExperience/>
+
     </div>
     <div className="buscadorHome">
     </div>
@@ -22,4 +23,4 @@ const ManageUsers = () => {
   )
 }
 
-export default ManageUsers;
+export default ManageExperiences;

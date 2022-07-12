@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import { deleteProfile, editProfile } from '../../actions/profile.js';
+import { deleteExperience, editExperience } from '../../../actions/experience.js';
 import { connect } from 'react-redux';
-import './ProfileCard.css';
+import './ExperienceCard.css';
 
 class ProfileCard extends Component {
 
   handleDelete = () => {
-    this.props.deleteProfile(this.props.profile.id)
+    this.props.deleteExperience(this.props.experience.id)
   }
 
   handleEdit = () => {
-    this.props.editProfile(this.props.profile.id)
+    this.props.editExperience(this.props.experience.id)
   }
 
   render() {
@@ -29,4 +29,4 @@ class ProfileCard extends Component {
   }
 }
 
-export default connect(null, {deleteProfile, editProfile})(ProfileCard)
+export default connect(null, {deleteExperience, editExperience})(ProfileCard)

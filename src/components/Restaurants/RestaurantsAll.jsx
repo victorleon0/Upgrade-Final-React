@@ -1,52 +1,52 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import "./ExperiencesAll.scss";
+import "./RestaurantsAll.scss";
 
-const ExperiencesAll = () => {
-  const [experiences, setExperiences] = useState([]);
+const RestaurantsAll = () => {
+  const [restaurants, setRestaurants] = useState([]);
   useEffect(() => {
-    const getExperiences = async () => {
+    const getRestaurants = async () => {
       try {
-        const res = await axios("http://localhost:6022/experiences");
+        const res = await axios("http://localhost:6022/restaurants");
         console.log(res);
         // const {info, results} = await res.json(); //  Fetch
-        setExperiences(res.data);
+        setRestaurants(res.data);
       } catch (error) {
         console.log("Error en petición", error);
       }
     };
 
-    getExperiences();
+    getRestaurants();
   }, []);
 
   return (
     <>
-      <h4 className="titlepage">Reserva ahora tu experiencia y disfruta de un descuento único</h4>
+      <h4 className="titlepage">¿Tienes hambre? Elige entre los mejores restaurantes</h4>
       <div className="experiences__container">
       
-        {experiences &&
-          experiences.length > 0 &&
-          experiences.map((experience) => {
+        {restaurants &&
+          restaurants.length > 0 &&
+          restaurants.map((restaurant) => {
             return (
               
                 <div class="container">
                   <div class="card">
                     <img
                       class="image"
-                      src={experience.imagen}
-                    alt={experience.titulo}/>
+                      src={restaurant.image}
+                    alt={restaurant.title}/>
                     <div class="header">
                       <div class="product-name">
-                        {experience.titulo}
-                        <br/> <b> {experience.precio}€</b>
+                        {restaurant.title}
+                        <br/> <b> {restaurant.price}€</b>
                         
                       </div>
 
                       
                     </div>
                     <div class="card-body">
-                      <p class="description">{experience.subtitulo} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                      <p class="description">{restaurant.subtitle} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 
                       <div class="actions">
                         <div class="button bg-green c-white">
@@ -65,4 +65,4 @@ const ExperiencesAll = () => {
   );
 };
 
-export default ExperiencesAll;
+export default RestaurantsAll;

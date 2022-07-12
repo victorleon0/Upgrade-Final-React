@@ -34,19 +34,19 @@ const ExperiencesAll = () => {
                   <div class="card">
                     <img
                       class="image"
-                      src={experience.imagen}
-                    alt={experience.titulo}/>
+                      src={experience.image}
+                    alt={experience.title}/>
                     <div class="header">
                       <div class="product-name">
-                        {experience.titulo}
-                        <br/> <b> {experience.precio}€</b>
+                        {experience.title}
+                        <br/> <b> {experience.price}€</b>
                         
                       </div>
 
                       
                     </div>
                     <div class="card-body">
-                      <p class="description">{experience.subtitulo} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                      <p class="description">{experience.subtitle} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 
                       <div class="actions">
                         <div class="button bg-green c-white">

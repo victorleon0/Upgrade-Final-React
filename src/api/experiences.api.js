@@ -55,7 +55,7 @@ const getIndividualExperience = async (url) => {
   
     return {
       experiences: experiencesWithDetails,
-      experienceCategories: getExperienceCategories(experiences),
+      
     };
   }
   

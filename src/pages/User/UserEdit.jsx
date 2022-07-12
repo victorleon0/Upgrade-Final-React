@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileCard from "../../components/ProfileCard/ProfileCard";
+import ProfileCard from "../../components/ExperiencesAdmin/ExperienceCard/ExperienceCard";
 import NavigationUser from "../../components/NavigationUser/NavigationUser";
 import Footer from "../../components/Footer/Footer";
 

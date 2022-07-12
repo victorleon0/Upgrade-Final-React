@@ -24,9 +24,7 @@ const Navigation = () => {
       <Link to="/trips">
         <button>¿Que hacer?</button>
       </Link>
-      <Link to="/events">
-        <button>Eventos en ...</button>
-      </Link>
+      
       <Link to="/weather">
         <button>El tiempo en ...</button>
       </Link>
@@ -34,18 +32,10 @@ const Navigation = () => {
         <button className="buttonContact">Contacta con nosotros</button>
       </Link>
       <Link to="/login">
-      <img className="usericon"
-        width="50px"
-        src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
-        alt="User"
-      />
+        <button>Inicia Sesión</button>
       </Link>
       <Link to="/users/register">
-      <img className="usericon"
-        width="50px"
-        src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
-        alt="User"
-      />
+        <button>Registro</button>
       </Link>
     
     </div>

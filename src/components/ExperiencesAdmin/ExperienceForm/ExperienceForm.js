@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ProfileForm.css'
+import './ExperienceForm.css'
 
 export default class profileForm extends Component {
   state={
@@ -32,51 +32,52 @@ export default class profileForm extends Component {
     <div className="flex-container">
       <div className="container">
 
-        <h1>Add Profile</h1>
+        <h1>Add Excursion</h1>
 
         <form onSubmit={this.handleSubmit}>
-          <label for="name">Name</label>
+          <label for="title">Titulo</label>
           <input
-            id="name"
+            id="title"
             type="text"
-            placeholder="name"
-            value={this.state.name}
+            placeholder="Título de la experiencia"
+            value={this.state.title}
             onChange={this.handleChange}
-            name="name"
+            name="title"
             />
             <br />
             <br />
-          <label for="picture">Picture</label>
+          <label for="image">Picture</label>
           <input
-            id="picture"
+            id="image"
             type="text"
-            placeholder="picture url"
-            value={this.state.picture}
+            placeholder="Introduce la URL de la image"
+            value={this.state.image}
             onChange={this.handleChange}
-            name="picture"
+            name="image"
             />
             <br />
             <br />
-          <label for="email">Email</label>
+          <label for="subtitle">Subtitulo</label>
           <input
-            id="email"
+            id="subtitle"
             type="text"
-            placeholder="email"
-            value={this.state.email}
+            placeholder="subtitle"
+            value={this.state.subtitle}
             onChange={this.handleChange}
-            name="email"
+            name="subtitle"
             />
             <br />
             <br />
-          <label for="message">Message</label>
+          <label for="price">Precio</label>
           <input
-            id="message"
+            id="price"
             type="text"
-            placeholder="leave message"
-            value={this.state.message}
+            placeholder="price"
+            value={this.state.price}
             onChange={this.handleChange}
-            name="message"
+            name="price"
             />
+            
             <br />
             <br />
             <button type="submit">ADD</button>

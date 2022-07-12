@@ -26,39 +26,47 @@ export default class EditComponent extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+          <label for="title">Titulo</label>
           <input
+            id="title"
             type="text"
-            placeholder="name"
-            value={this.state.name || ''}
+            placeholder="Título de la ewxperiencia"
+            value={this.state.title}
             onChange={this.handleChange}
-            name="name"
+            name="title"
             />
             <br />
             <br />
+          <label for="image">Picture</label>
           <input
+            id="image"
             type="text"
-            placeholder="pictureUrl"
-            value={this.state.picture || ''}
+            placeholder="Introduce la URL de la image"
+            value={this.state.image}
             onChange={this.handleChange}
-            name="picture"
+            name="image"
             />
             <br />
             <br />
+          <label for="subtitle">Subtitulo</label>
           <input
+            id="subtitle"
             type="text"
-            placeholder="email"
-            value={this.state.email || ''}
+            placeholder="subtitle"
+            value={this.state.subtitle}
             onChange={this.handleChange}
-            name="email"
+            name="subtitle"
             />
             <br />
             <br />
+          <label for="price">Precio</label>
           <input
-            type="message"
-            placeholder="leave message"
-            value={this.state.message || ''}
+            id="price"
+            type="text"
+            placeholder="price"
+            value={this.state.price}
             onChange={this.handleChange}
-            name="message"
+            name="price"
             />
             <br />
             <br />
