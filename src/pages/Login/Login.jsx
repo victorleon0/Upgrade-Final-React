@@ -37,7 +37,7 @@ const Login = () => {
   return (
     <div className="login">
       <div className="navigator">
-        {/* <Navigation /> */}
+         <Navigation /> 
       </div>
       <div className="formContainer">
         <h4>Login</h4>
@@ -64,7 +64,7 @@ const Login = () => {
           >
             Login
           </button>
-          <p>¿No tienes cuenta? Regístrate</p>
+          <a href="/users/register">¿No tienes cuenta? Regístrate</a>
         </form>
       </div>
     </div>
