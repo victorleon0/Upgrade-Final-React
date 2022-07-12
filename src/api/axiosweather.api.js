@@ -4,7 +4,6 @@
 
 // https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={f93afd7c993ac5daa11a4b336bf3c98c}
 
- 
 import axios from "axios";
 
 const URL = "https://api.openweathermap.org/data/2.5/weather";

@@ -32,37 +32,19 @@ const Contact = ({ onChangePage, previous }) => {
             <label htmlFor="firstname">
               <strong>Nombre</strong>
             </label>
-            <input
-              type="text"
-              id="firstname"
-              name="firstname"
-              placeholder="Nombre"
-              onChange={handleChange}
-            ></input>
+            <input type="text" id="firstname" name="firstname" placeholder="Nombre" onChange={handleChange}></input>
           </div>
           <div id="container__last">
             <label htmlFor="lastname">
               <strong>Apellidos</strong>
             </label>
-            <input
-              type="text"
-              id="lastname"
-              name="lastname"
-              placeholder="Apellidos"
-              onChange={handleChange}
-            ></input>
+            <input type="text" id="lastname" name="lastname" placeholder="Apellidos" onChange={handleChange}></input>
           </div>
           <div id="container__email">
             <label htmlFor="email">
               <strong>Email</strong>
             </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              onChange={handleChange}
-            ></input>
+            <input type="email" id="email" name="email" placeholder="Email" onChange={handleChange}></input>
           </div>
           <div id="container__message">
             <label htmlFor="message">
@@ -78,20 +60,14 @@ const Contact = ({ onChangePage, previous }) => {
             ></textarea>
           </div>
           <div id="container__submit">
-            <input
-              type="submit"
-              name="submit"
-              value="Enviar"
-              onClick={handleSubmit}
-            ></input>
+            <input type="submit" name="submit" value="Enviar" onClick={handleSubmit}></input>
           </div>
         </form>
       </div>
       <div className="contactcards">
-      <ContactCards/>
+        <ContactCards />
+      </div>
     </div>
-    </div>
-    
   );
 };
 

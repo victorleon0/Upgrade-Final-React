@@ -1,12 +1,11 @@
-const FilterByInput = ({pokemons, filter}) => {
-
+const FilterByInput = ({ pokemons, filter }) => {
   const filterByNameOrId = (event) => {
     const inputValue = event.target.value.toLowerCase();
-    
+
     const filtered = pokemons.filter((pokemon) => {
       const matchName = pokemon.name.toLowerCase().includes(inputValue);
       const matchId = pokemon.id === Number(inputValue);
-  
+
       return matchName || matchId;
     });
 

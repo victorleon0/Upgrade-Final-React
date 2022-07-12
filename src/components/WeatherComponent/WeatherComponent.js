@@ -18,17 +18,14 @@ const WeatherComponent = () => {
   // };
 
   const search = async (event) => {
-      
     if (event.key === "Enter") {
       const data = await fetchweather(query);
 
       setWeather(data);
       setQuery("");
-    }
-     else {
-        const data = await fetchweather(query);
-       setWeather(data);
-       
+    } else {
+      const data = await fetchweather(query);
+      setWeather(data);
     }
   };
 
@@ -70,5 +67,4 @@ const WeatherComponent = () => {
   );
 };
 
-export default WeatherComponent
-
+export default WeatherComponent;

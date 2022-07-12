@@ -3,18 +3,15 @@
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: .5rem;
-    border: .1rem solid lightgray;
-    box-shadow: 0 0 1rem 0 rgba(black, .05);
-    width: 100%;
-    height: 600px;
-    margin: auto;
-    text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  border: 0.1rem solid lightgray;
+  box-shadow: 0 0 1rem 0 rgba(black, 0.05);
+  width: 100%;
+  height: 600px;
+  margin: auto;
+  text-align: center;
 }
-
-
-
 
 .edit {
   color: black;
@@ -37,10 +34,9 @@
   cursor: pointer;
 }
 
-
-@media only screen and (max-width:620px) {
+@media only screen and (max-width: 620px) {
   /* For mobile phones: */
   .flex-container_card {
-    width:100%;
+    width: 100%;
   }
 }

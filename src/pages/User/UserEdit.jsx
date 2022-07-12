@@ -13,8 +13,7 @@ const UserEdit = () => {
         <div>
           <ProfileCard />
         </div>
-        <div>
-        </div>
+        <div></div>
       </div>
       <div className="buscadorHome"></div>
       <div className="footer">

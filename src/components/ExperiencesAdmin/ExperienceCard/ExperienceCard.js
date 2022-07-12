@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { deleteExperience, editExperience } from '../../../actions/experience.js';
 import { connect } from 'react-redux';
-import './ExperienceCard.css';
+import './ExperienceCard.scss';
 
 class ProfileCard extends Component {
 

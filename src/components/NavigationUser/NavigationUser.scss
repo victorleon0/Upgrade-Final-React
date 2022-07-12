@@ -1,46 +1,42 @@
 .navigatorBar {
-    text-align: center;
-    width: 100%;
-    height: 12vh;
-  
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    box-shadow: inset;
-    .searchbar {
-      flex: 1;
-      margin-top: 20px;
-      margin-left: 10px;
-    }
-    .linksContainer {
-      margin-top: 25px;
-      margin-right: 40px;
-      display: flex;
-      gap: 20px;
-      font-weight: bold;
-      
-      button {
-        border: none;
-        background-color: transparent;
-        border-bottom: 1px solid black;
-        padding: 10px;
-        cursor: pointer;
-        border-radius: 10px;
-      }
-      .buttonTravel {
-        background-color: transparent;
-        border: 1px solid black;
-       
-        padding: 10px;
-        cursor: pointer;
-      }
-      .usericon {
-        width: 35px;
-        height: 35px;
-      }
+  text-align: center;
+  width: 100%;
+  height: 12vh;
 
-      
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  box-shadow: inset;
+  .searchbar {
+    flex: 1;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .linksContainer {
+    margin-top: 25px;
+    margin-right: 40px;
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+
+    button {
+      border: none;
+      background-color: transparent;
+      border-bottom: 1px solid black;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    .buttonTravel {
+      background-color: transparent;
+      border: 1px solid black;
+
+      padding: 10px;
+      cursor: pointer;
+    }
+    .usericon {
+      width: 35px;
+      height: 35px;
     }
   }
-  
-  
+}
