@@ -16,11 +16,11 @@ const experienceReducer = (state = initialState, action) => {
     }
 
     case actions.DELETE_EXPERIENCE: {
-      console.log('antes');
+
       const experienceFilter = state.experiences.filter((experiences) => experiences.id !== payload);
-      console.log('despues');
+
       
-      return {  experiences: [experienceFilter] };
+      return {  experiences: [experienceFilter] }; // Preguntar a Sergio
     }
 
     case actions.EDIT_EXPERIENCE: {
