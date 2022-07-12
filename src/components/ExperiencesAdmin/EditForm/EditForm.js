@@ -10,7 +10,7 @@ const EditComponent = (props) => { // <EditComponente experience={experience} />
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const cb = navigate("/");
+    const cb = navigate("/admin/manageexperiences");
     dispatch(editExperience(form, cb));
   };
 

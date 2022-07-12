@@ -79,14 +79,7 @@ const ExperienceForm = () => {
           <button type="submit">ADD</button>
         </form>
       </div>
-      <div
-        className="title"
-        style={{ textAlign: "right", fontSize: "100px", color: "white", marginTop: "100px", marginRight: "-40px" }}
-      >
-        MANAGE
-        <br />
-        YOUR PROFILES
-      </div>
+      
     </div>
   );
 };

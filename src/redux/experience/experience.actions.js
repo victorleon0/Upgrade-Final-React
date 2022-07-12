@@ -32,7 +32,7 @@ export const deleteExperience = (experience) => async (dispatch) => {
 
 
 export const editExperience = (experience, cb) => async (dispatch) => {
-  const res = await axios.put(`${experienceUrl}/${experience.id}`, experience);
+  const res = await axios.put(`${experienceUrl}/${experience._id}`, experience);
 
   dispatch({
     type: EDIT_EXPERIENCE,

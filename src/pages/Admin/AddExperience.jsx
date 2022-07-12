@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
 import NavigationAdmin from "../../components/NavigationAdmin/NavigationAdmin";
-import PostExperience from "../../containers/PostExperience";
+import ExperienceForm from "../../components/ExperiencesAdmin/ExperienceForm/ExperienceForm";
 
 const ManageExperiences = () => {
   return (
@@ -10,7 +10,7 @@ const ManageExperiences = () => {
         <NavigationAdmin />
       </div>
       <div className="users-container">
-        <PostExperience />
+        <ExperienceForm />
       </div>
       <div className="buscadorHome"></div>
       <div className="footer">
