@@ -11,6 +11,7 @@ const Restaurants = () => {
         <Navigation />
       </div>
       <div className="contact-container">
+      <img className="backroundImage" src="https://img.freepik.com/free-photo/wooden-board-empty-table-top-blurred-background_1253-1584.jpg?w=2000" alt="Backround"></img>
       
 
       </div>

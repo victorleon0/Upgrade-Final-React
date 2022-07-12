@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Navigation from "../../components/Navigation/Navigation";
-import EventsForm from "../../components/Events/EventsForm";
-import EventList from "../../components/Events/EventList";
+
 import Footer from "../../components/Footer/Footer"
 
 class Events extends Component {
@@ -57,13 +56,9 @@ class Events extends Component {
           <Navigation />
         </div>
         <div className="eventos">
-        <EventsForm
-                      categorias={this.state.categorias}
-                      obtenerEventos={this.obtenerEventos}
-          ></EventsForm>
-          <EventList
-                    eventos={this.state.eventos}
-          ></EventList> 
+        <img className="backroundImage" src="https://overdrivestudiosdotes.files.wordpress.com/2014/09/people-concert-wallpaper-1080p-backgrounds-concert-people-background-25952.jpg" alt="Backround"></img>
+
+         
         </div>
         <div className="footer">
           <Footer />
@@ -74,5 +69,4 @@ class Events extends Component {
 }
 
         
-
 export default Events;
