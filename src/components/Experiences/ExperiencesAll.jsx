@@ -30,14 +30,14 @@ const ExperiencesAll = () => {
           experiences.map((experience) => {
             return (
               
-                <div class="container">
-                  <div class="card">
+                <div className="container">
+                  <div className="card">
                     <img
-                      class="image"
+                      className="image"
                       src={experience.image}
                     alt={experience.title}/>
-                    <div class="header">
-                      <div class="product-name">
+                    <div className="header">
+                      <div className="product-name">
                         {experience.title}
                         <br/> <b> {experience.price}€</b>
                         
@@ -45,11 +45,11 @@ const ExperiencesAll = () => {
 
                       
                     </div>
-                    <div class="card-body">
-                      <p class="description">{experience.subtitle} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <div className="card-body">
+                      <p className="description">{experience.subtitle} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 
-                      <div class="actions">
-                        <div class="button bg-green c-white">
+                      <div className="actions">
+                        <div className="button bg-green c-white">
                           <a href="/login">¡Reserva Ahora!</a>
                           
                         </div>

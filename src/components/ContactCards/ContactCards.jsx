@@ -4,7 +4,7 @@ import './ContactCards.scss';
 const ContactCards = () => {
   return (
     <div className="containercards">
-      <aside class="profile-card">
+      <aside className="profile-card">
         <header>
           <a href="https://github.com/Denisse-Paula">
             <img
@@ -18,7 +18,7 @@ const ContactCards = () => {
           <h2>Full Stack Developer</h2>
         </header>
 
-        <ul class="profile-social-links">
+        <ul className="profile-social-links">
           <li>
             <a href="mailto:pauldenisse@gmail.com">
               <img
@@ -47,7 +47,7 @@ const ContactCards = () => {
           </li>
         </ul>
       </aside>
-      <aside class="profile-card">
+      <aside className="profile-card">
         <header>
           <a href="https://github.com/Nughy10">
             <img
@@ -61,7 +61,7 @@ const ContactCards = () => {
           <h2>Full Stack Developer</h2>
         </header>
 
-        <ul class="profile-social-links">
+        <ul className="profile-social-links">
           <li>
             <a href="mailto: pending">
               <img
@@ -90,7 +90,7 @@ const ContactCards = () => {
           </li>
         </ul>
       </aside>
-      <aside class="profile-card">
+      <aside className="profile-card">
         <header>
           <a href="https://github.com/victorleon0">
             <img
@@ -104,7 +104,7 @@ const ContactCards = () => {
           <h2>Full Stack Developer</h2>
         </header>
 
-        <ul class="profile-social-links">
+        <ul className="profile-social-links">
           <li>
             <a href="mailto:victor.leon.huerta@gmail.com">
               <img
@@ -133,7 +133,7 @@ const ContactCards = () => {
           </li>
         </ul>
       </aside>
-      <aside class="profile-card">
+      <aside className="profile-card">
         <header>
           <a href="https://github.com/Perillos">
             <img
@@ -147,7 +147,7 @@ const ContactCards = () => {
           <h2>Full Stack Developer</h2>
         </header>
 
-        <ul class="profile-social-links">
+        <ul className="profile-social-links">
           <li>
             <a href="mailto:pending">
               <img

@@ -27,7 +27,7 @@ const Contact = ({ onChangePage, previous }) => {
   return (
     <div id="container">
       <div id="container__forms">
-        <form id="container__form" method="post" type="submit">
+        <form id="container__form" method="post" type="submit" action="mailto:victor.leon.huerta@gmail.com">
           <div id="container__first">
             <label htmlFor="firstname">
               <strong>Nombre</strong>
