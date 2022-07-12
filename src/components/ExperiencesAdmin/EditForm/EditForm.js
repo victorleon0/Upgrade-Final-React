@@ -20,7 +20,7 @@ const EditComponent = (props) => { // <EditComponente experience={experience} />
   };
 
   return (
-    <div>
+    <div className="editExperience">
       <form onSubmit={handleSubmit}>
         <label htmlFor="title">Titulo</label>
         <input
