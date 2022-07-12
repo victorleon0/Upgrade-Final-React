@@ -9,7 +9,7 @@ const Navigation = () => {
         <Searchbar />
       </div>
       <div className="linksContainer">
-        <Link to="/">Home</Link>
+        
 
         <Link to="/food">
           <button>¿Donde comer?</button>
