@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import EditForm from "../components/ExperiencesAdmin/EditForm/EditForm.js";
-import { updateExperience } from "../actions/experience";
+import { updateExperience } from "../redux/experience/experience.actions";
 import { connect } from "react-redux";
 
 class EditContainer extends Component {

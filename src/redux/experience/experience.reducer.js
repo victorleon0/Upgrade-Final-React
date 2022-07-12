@@ -1,4 +1,4 @@
-import { ADD_EXPERIENCE, DELETE_EXPERIENCE, EDIT_EXPERIENCE, UPDATE_EXPERIENCE } from "../actions/experience";
+import { ADD_EXPERIENCE, DELETE_EXPERIENCE, EDIT_EXPERIENCE, UPDATE_EXPERIENCE } from "./experience.actions";
 
 const initialState = [
   {
@@ -30,7 +30,9 @@ const initialState = [
   },
 ];
 
-export default (state = initialState, { type, payload } = {}) => {
+const experienceReducer = (state = initialState, action) => {
+  const { type, payload } = action;
+
   switch (type) {
     case ADD_EXPERIENCE:
       return state.concat({
@@ -60,3 +62,5 @@ export default (state = initialState, { type, payload } = {}) => {
       return state;
   }
 };
+
+export default experienceReducer;

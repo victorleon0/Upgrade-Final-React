@@ -1,4 +1,4 @@
-import { ADD_RESTAURANT, DELETE_RESTAURANT, EDIT_RESTAURANT, UPDATE_RESTAURANT } from "../actions/restaurant";
+import { ADD_RESTAURANT, DELETE_RESTAURANT, EDIT_RESTAURANT, UPDATE_RESTAURANT } from "./restaurant.actions";
 
 const initialState = [
   {
@@ -26,7 +26,9 @@ const initialState = [
   },
 ];
 
-export default (state = initialState, { type, payload } = {}) => {
+const restaurantReducer = (state = initialState, action) => {
+  const { type, payload } = action;
+
   switch (type) {
     case ADD_RESTAURANT:
       return state.concat({
@@ -56,3 +58,5 @@ export default (state = initialState, { type, payload } = {}) => {
       return state;
   }
 };
+
+export default restaurantReducer;

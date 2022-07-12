@@ -4,7 +4,7 @@ import "./index.scss";
 import App from "./App";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
-import store from "./store";
+import store from "./redux/store";
 
 import Restaurants from "./pages/Food/Food.jsx";
 import Trips from "./pages/Trips/Trips.jsx";

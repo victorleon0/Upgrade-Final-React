@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import ProfileForm from "../components/ExperiencesAdmin/ExperienceForm/ExperienceForm";
-import { addExperience } from "../actions/experience.js";
 import { connect } from "react-redux";
+import { addExperience } from "../redux/experience/experience.actions";
+import ProfileForm from "../components/ExperiencesAdmin/ExperienceForm/ExperienceForm";
 
 class PostProfile extends Component {
   addExperience = (data) => {

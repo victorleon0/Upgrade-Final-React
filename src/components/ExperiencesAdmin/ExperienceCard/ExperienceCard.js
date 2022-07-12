@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { deleteExperience, editExperience } from '../../../actions/experience.js';
+import { deleteExperience, editExperience } from '../../../redux/experience/experience.actions';
 import { connect } from 'react-redux';
 import './ExperienceCard.scss';
 
