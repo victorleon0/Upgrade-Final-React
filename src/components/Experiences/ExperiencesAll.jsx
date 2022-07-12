@@ -22,36 +22,42 @@ const ExperiencesAll = () => {
 
   return (
     <>
-      <h4>Reserva ahora tu experiencia y disfruta de un descuento único</h4>
+      <h4 className="titlepage">Reserva ahora tu experiencia y disfruta de un descuento único</h4>
       <div className="experiences__container">
+      
         {experiences &&
           experiences.length > 0 &&
           experiences.map((experience) => {
             return (
-              <div className="experience" key={experience.id}>
-              <div className="precio">Now: {experience.precio}€</div>
-                <div className="imgcontainer">
-                  <img
-                    className="image"
-                    src={experience.imagen}
-                    alt={experience.titulo}
-                  />
+              
+                <div class="container">
+                  <div class="card">
+                    <img
+                      class="image"
+                      src={experience.imagen}
+                    alt={experience.titulo}/>
+                    <div class="header">
+                      <div class="product-name">
+                        {experience.titulo}
+                        <br/> <b> {experience.precio}€</b>
+                        
+                      </div>
+
+                      
+                    </div>
+                    <div class="card-body">
+                      <p class="description">{experience.subtitulo} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+                      <div class="actions">
+                        <div class="button bg-green c-white">
+                          <a href="/login">¡Reserva Ahora!</a>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                
-                <div className="title">
-                  <strong>{experience.titulo}</strong>
-                </div>
-                <div className="description">
-                  Descripción: <strong>{experience.subtitulo}</strong>
-                </div>
-                
-                <a href="/login">
-                  <button>¡Reserva ahora!</button>
-                </a>
-                <div className="language">
-                  Lang: <strong>{experience.idioma}</strong>
-                </div>
-              </div>
+              
             );
           })}
       </div>
