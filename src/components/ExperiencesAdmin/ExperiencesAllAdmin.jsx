@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 
 import "./ExperiencesAllAdmin.scss";
 import { experienceUrl } from "../../helpers/url.helper";
+import { useNavigate } from "react-router-dom";
 
 const ExperiencesAll = () => {
   const [experiences, setExperiences] = useState([]);
@@ -23,6 +24,9 @@ const ExperiencesAll = () => {
 
     getExperiences();
   }, []);
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
   return (
     <>
@@ -30,9 +34,9 @@ const ExperiencesAll = () => {
       <div className="experiences__container">
         {experiences &&
           experiences.length > 0 &&
-          experiences.map((experience) => {
+          experiences.map((experience, id) => {
             return (
-              <div className="container">
+              <div className="container" key={id}>
                 <div className="card">
                   <img className="image" src={experience.image} alt={experience.title} />
                   <div className="header">
@@ -62,8 +66,8 @@ const ExperiencesAll = () => {
                       <button
                     className="button"
                     onClick={() => {
-                      
-                      dispatch(deleteExperience(experience));
+                      dispatch(deleteExperience(experience))
+                      refreshPage()
                     }}
                   >
                     Eliminar

@@ -21,10 +21,11 @@ export const addExperience = (data) => async (dispatch) => {
 };
 
 export const deleteExperience = (experience) => async (dispatch) => {
-  await axios.delete(`${experienceUrl}/${experience._id}`);
+  const res = await axios.delete(`${experienceUrl}/${experience._id}`, experience);
   dispatch({ 
     type: DELETE_EXPERIENCE, 
-    payload: experience });
+    payload: res.data 
+  });
   
 
 };
