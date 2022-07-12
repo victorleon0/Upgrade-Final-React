@@ -16,8 +16,11 @@ const experienceReducer = (state = initialState, action) => {
     }
 
     case actions.DELETE_EXPERIENCE: {
-      const experiences = state.filter((experience) => experience.id !== payload);
-      return { ...state, experiences };
+      
+      const experiences = state.filter((experiences) => experiences._id !== payload);
+      
+      
+      return { ...state, experiences: [...experiences]};
     }
 
     case actions.EDIT_EXPERIENCE: {

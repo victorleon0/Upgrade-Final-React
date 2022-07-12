@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { deleteExperience } from "../../redux/experience/experience.actions";
+import { deleteExperience, editExperience } from "../../redux/experience/experience.actions";
 import { useDispatch } from "react-redux";
 
 
@@ -49,13 +49,21 @@ const ExperiencesAll = () => {
 
                     <div className="actions">
                       <div className="button bg-green c-white">
-                        <a href="/login">Editar</a>
-                      </div>
+                      <button
+                    className="button"
+                    onClick={() => {
+                      dispatch(editExperience());
+                    }}
+                  >
+                    Editar
+                  </button>
+                  </div>
                       <div className="buttonDelete">
                       <button
                     className="button"
                     onClick={() => {
-                      dispatch(deleteExperience());
+                      
+                      dispatch(deleteExperience(experience));
                     }}
                   >
                     Eliminar
