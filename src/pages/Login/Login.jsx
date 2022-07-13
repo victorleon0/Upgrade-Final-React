@@ -1,12 +1,14 @@
 import React from "react";
 import { useState } from "react";
-import Searchbar from "../../components/Searchbar/Searchbar";
 import { useNavigate } from "react-router-dom";
 import "./Login.scss";
+import { useDispatch } from "react-redux";
+import { loginFormSubmit } from "../../redux/auth/auth.actions"
 
 const Login = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({ email: "", password: "" });
+  const dispatch = useDispatch();
 
   const submitLogin = (ev) => {
     ev.preventDefault();
@@ -23,6 +25,7 @@ const Login = () => {
       .catch((error) => console.error("Error:", error))
       .then((resesponse) => {
         console.log(resesponse.role);
+        dispatch(loginFormSubmit(resesponse))
         if (resesponse.role === "admin") {
           navigate("/admin");
         } else {

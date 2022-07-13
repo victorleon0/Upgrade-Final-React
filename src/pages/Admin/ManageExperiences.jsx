@@ -12,7 +12,8 @@ const ManageExperiences = () => {
         <NavigationAdmin />
       </div>
       <div className="users-container">
-      
+      <img className="backroundImage" src="https://cdn.wallpapersafari.com/18/9/QLolf9.jpg" alt="Backround"
+      ></img>
       <ExperiencesAllAdmin/>
       </div>
       <div className="buscadorHome"></div>

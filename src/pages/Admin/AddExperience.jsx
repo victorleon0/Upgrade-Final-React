@@ -9,6 +9,8 @@ const AddExperience = () => {
       <div className="navigatorAdmin">
         <NavigationAdmin />
       </div>
+      <img className="backroundImage" src="https://cdn.wallpapersafari.com/18/9/QLolf9.jpg" alt="Backround"
+      ></img>
       <div className="users-container">
         <ExperienceForm />
       </div>

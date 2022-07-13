@@ -16,6 +16,8 @@ const Admin = () => {
         <NavigationAdmin />
       </div>
       <div className="hero-container">
+      <img className="backroundImage" src="https://cdn.wallpapersafari.com/18/9/QLolf9.jpg" alt="Backround"
+      ></img>
         <h1 className="title">¡Bienvenido!</h1>
         <h4 className="title">Utiliza la barra de navegación para gestionar excursiones y usuarios</h4>
       </div>
