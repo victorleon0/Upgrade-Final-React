@@ -8,36 +8,26 @@ import axios from "axios";
 const EditExperience = () => {
   
   const { id } = useParams();
+  const [formData, setForm] = useState({});
 
-  const [experiences, setExperiences] = useState([]);
   useEffect(() => {
     const getExperiences = async () => {
       try {
-        const res = await axios(experienceUrl);
-        setExperiences(res.data);
+        const res = await axios(`${experienceUrl}/${id}`);
+
+        setForm(res.data)
       } catch (error) {
         console.log("Error en petición", error);
       }
     };
-
     getExperiences();
   }, []);
-
-  
-
-  async function  experiencefind (serch) {
-     return await serch._id === id
-  }
-
-  const experienceToUpdate = experiences.find(experiencefind)
-
 
 
   const dispatch = useDispatch()
   const navigate = useNavigate();
 
 
-  const [formData, setForm] = useState(experienceToUpdate);
 
 
   const handleSubmit = (eve) => {
@@ -55,26 +45,29 @@ const EditExperience = () => {
 
 
   return (
+    <>
     <form onSubmit={handleSubmit}>
       <label>
         <span>Titulo</span>
-        <input type="text" name="title" placeholder={experienceToUpdate ? experienceToUpdate.title : ''} onChange={handleChange} />
+        <input type="text" name="title" value={formData.title} onChange={handleChange} />
       </label>
       <label>
         <span>Subtitle</span>
-        <input type="text" name="subtitle"  placeholder={experienceToUpdate ? experienceToUpdate.subtitle : ''} onChange={handleChange}/>
+        <input type="text" name="subtitle"  value={formData.subtitle} onChange={handleChange}/>
       </label>
       <label>
         <span>Image</span>
-        <input type="text" name="image"  placeholder={experienceToUpdate ? experienceToUpdate.image : ''} onChange={handleChange}/>
+        <input type="text" name="image"  value={formData.image} onChange={handleChange}/>
       </label>
       <label>
         <span>Precio</span>
-        <input type="text" name="price"  placeholder={experienceToUpdate ? experienceToUpdate.price : ''} onChange={handleChange}/>
+        <input type="text" name="price"  value={formData.price} onChange={handleChange}/>
       </label>
       <button>Editar Experience</button>
     </form>
+    </>
   );
 };
+
 
 export default EditExperience;
