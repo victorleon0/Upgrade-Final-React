@@ -24,7 +24,6 @@ const Login = () => {
 
       .catch((error) => console.error("Error:", error))
       .then((resesponse) => {
-        console.log(resesponse.role);
         dispatch(loginFormSubmit(resesponse))
         if (resesponse.role === "admin") {
           navigate("/admin");

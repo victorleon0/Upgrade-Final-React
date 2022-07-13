@@ -40,7 +40,7 @@ root.render(
           <Route path="/users/register" element={<Register />} />
           <Route path="/users/books" element={<UserBooks />} />
           <Route path="/users/edit" element={<UserEdit />} />
-          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin" element={<Auth component={<Admin />} />} />
           <Route path="/admin/manageexperiences" element={<ManageExperiences />} />
           <Route path="/admin/managerestaurants" element={<ManageRestaurants />} />
           <Route path="/admin/addexperiences" element={<AddExperiences />} />

@@ -11,7 +11,7 @@ const Register = (/* prop */) => {
     ev.preventDefault();
     navigator("/login")
     /* prop.registerUser(form); */
-    console.log(form);
+    ;
     fetch("http://localhost:6022/users/register", {
       method: "POST", // or 'PUT'
       body: JSON.stringify(form), // data can be `string` or {object}!

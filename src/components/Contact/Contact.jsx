@@ -17,7 +17,7 @@ const Contact = ({ onChangePage, previous }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(contactForm);
+    ;
   };
 
   return (

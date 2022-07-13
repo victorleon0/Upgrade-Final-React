@@ -1,6 +1,5 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
-import NavigationAdmin from "../../components/NavigationAdmin/NavigationAdmin";
 import HomeButton from "../../components/HomeButton/HomeButton";
 
 const Admin = () => {

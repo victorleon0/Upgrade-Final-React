@@ -1,7 +1,14 @@
 import { Link } from "react-router-dom";
 import "./NavigationAdmin.scss";
 
+
+
 const NavigationAdmin = () => {
+
+  const postlogout = (ev) => {
+    fetch("http://localhost:6022/users/logout", {method: "POST"})
+  }
+
   return (
     <div className="navigatorBar">
       <div className="linksContainer">
@@ -18,7 +25,7 @@ const NavigationAdmin = () => {
           <button>Añadir Excursiones</button>
         </Link>
         <Link to="/logout">
-          <button>Salir de Admin</button>
+          <button onClick={postlogout}>Salir de Admin</button>
         </Link>
       </div>
     </div>
