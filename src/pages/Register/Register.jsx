@@ -1,12 +1,15 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Register.scss";
 
 const Register = (/* prop */) => {
   const [form, setForm] = useState({ email: "", password: "" });
+  const navigator = useNavigate();
 
   const submitRegister = (ev) => {
     ev.preventDefault();
+    navigator("/login")
     /* prop.registerUser(form); */
     console.log(form);
     fetch("http://localhost:6022/users/register", {
