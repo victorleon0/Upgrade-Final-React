@@ -46,19 +46,19 @@ const EditRestaurant = () => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <label>
         <span>Titulo</span>
-        <input type="text" name="title" value={restaurantToUpdate ? restaurantToUpdate.title : ''} {...register("title")} />
+        <input type="text" name="title" placeholder={restaurantToUpdate ? restaurantToUpdate.title : ''} {...register("title")} />
       </label>
       <label>
         <span>Subtitle</span>
-        <input type="text" name="subtitle"  value={restaurantToUpdate ? restaurantToUpdate.subtitle : ''}{...register("subtitle")}/>
+        <input type="text" name="subtitle"  placeholder={restaurantToUpdate ? restaurantToUpdate.subtitle : ''}{...register("subtitle")}/>
       </label>
       <label>
         <span>Image</span>
-        <input type="text" name="image"  value={restaurantToUpdate ? restaurantToUpdate.image : ''}{...register("image")}/>
+        <input type="text" name="image"  placeholder={restaurantToUpdate ? restaurantToUpdate.image : ''}{...register("image")}/>
       </label>
       <label>
         <span>Precio</span>
-        <input type="text" name="price"  value={restaurantToUpdate ? restaurantToUpdate.price : ''}{...register("price")}/>
+        <input type="text" name="price"  placeholder={restaurantToUpdate ? restaurantToUpdate.price : ''}{...register("price")}/>
       </label>
       <button>Editar Restaurant</button>
     </form>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { editExperience } from '../../redux/experience/experience.actions';
 import { useNavigate, useParams } from "react-router-dom";
@@ -9,6 +8,7 @@ import axios from "axios";
 const EditExperience = () => {
   
   const { id } = useParams();
+
   const [experiences, setExperiences] = useState([]);
   useEffect(() => {
     const getExperiences = async () => {
@@ -23,6 +23,8 @@ const EditExperience = () => {
     getExperiences();
   }, []);
 
+  
+
   async function  experiencefind (serch) {
      return await serch._id === id
   }
@@ -30,35 +32,45 @@ const EditExperience = () => {
   const experienceToUpdate = experiences.find(experiencefind)
 
 
+
   const dispatch = useDispatch()
   const navigate = useNavigate();
 
-  const {register, handleSubmit } = useForm({defaultValues:{
-  }});
+
+  const [formData, setForm] = useState(experienceToUpdate);
 
 
-  const onSubmit = (formData) => {
-    dispatch(editExperience(formData, id));
-    navigate('/admin/manageexperiences')
-  };
+  const handleSubmit = (eve) => {
+      eve.preventDefault();
+      dispatch(editExperience(formData, id))
+      navigate('/admin/manageexperiences')
+  }
+
+  const handleChange = (eve) => {
+      const  {name, value} = eve.target
+      setForm({...formData, [name]:value})
+  }
+
+
+
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit}>
       <label>
         <span>Titulo</span>
-        <input type="text" name="title" placeholder={experienceToUpdate ? experienceToUpdate.title : ''} {...register("title")} />
+        <input type="text" name="title" placeholder={experienceToUpdate ? experienceToUpdate.title : ''} onChange={handleChange} />
       </label>
       <label>
         <span>Subtitle</span>
-        <input type="text" name="subtitle"  placeholder={experienceToUpdate ? experienceToUpdate.subtitle : ''}{...register("subtitle")}/>
+        <input type="text" name="subtitle"  placeholder={experienceToUpdate ? experienceToUpdate.subtitle : ''} onChange={handleChange}/>
       </label>
       <label>
         <span>Image</span>
-        <input type="text" name="image"  placeholder={experienceToUpdate ? experienceToUpdate.image : ''}{...register("image")}/>
+        <input type="text" name="image"  placeholder={experienceToUpdate ? experienceToUpdate.image : ''} onChange={handleChange}/>
       </label>
       <label>
         <span>Precio</span>
-        <input type="text" name="price"  placeholder={experienceToUpdate ? experienceToUpdate.price : ''}{...register("price")}/>
+        <input type="text" name="price"  placeholder={experienceToUpdate ? experienceToUpdate.price : ''} onChange={handleChange}/>
       </label>
       <button>Editar Experience</button>
     </form>
