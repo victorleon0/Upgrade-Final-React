@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { editRestaurant } from '../../redux/restaurant/restaurant.actions';
 import { useNavigate, useParams } from "react-router-dom";
@@ -9,60 +8,66 @@ import axios from "axios";
 const EditRestaurant = () => {
   
   const { id } = useParams();
-  const [restaurants, setRestaurants] = useState([]);
+  const [formData, setForm] = useState({});
+
   useEffect(() => {
     const getRestaurants = async () => {
       try {
-        const res = await axios(restaurantUrl);
-        setRestaurants(res.data);
+        const res = await axios(`${restaurantUrl}/${id}`);
+
+        setForm(res.data)
       } catch (error) {
         console.log("Error en petición", error);
       }
     };
-
     getRestaurants();
   }, []);
-
-  async function  restaurantfind (serch) {
-     return await serch._id === id
-  }
-
-  const restaurantToUpdate = restaurants.find(restaurantfind)
 
 
   const dispatch = useDispatch()
   const navigate = useNavigate();
 
-  const {register, handleSubmit } = useForm({defaultValues:{
-  }});
 
 
-  const onSubmit = (formData) => {
-    dispatch(editRestaurant(formData, id));
-    navigate('/admin/managerestaurants')
-  };
+
+  const handleSubmit = (eve) => {
+      eve.preventDefault();
+      dispatch(editRestaurant(formData, id))
+      navigate('/admin/managerestaurants')
+  }
+
+  const handleChange = (eve) => {
+      const  {name, value} = eve.target
+      setForm({...formData, [name]:value})
+  }
+
+
+
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+
+    <form onSubmit={handleSubmit}>
       <label>
         <span>Titulo</span>
-        <input type="text" name="title" placeholder={restaurantToUpdate ? restaurantToUpdate.title : ''} {...register("title")} />
+        <input type="text" name="title" value={formData.title} onChange={handleChange} />
       </label>
       <label>
         <span>Subtitle</span>
-        <input type="text" name="subtitle"  placeholder={restaurantToUpdate ? restaurantToUpdate.subtitle : ''}{...register("subtitle")}/>
+        <input type="text" name="subtitle"  value={formData.subtitle} onChange={handleChange}/>
       </label>
       <label>
         <span>Image</span>
-        <input type="text" name="image"  placeholder={restaurantToUpdate ? restaurantToUpdate.image : ''}{...register("image")}/>
+        <input type="text" name="image"  value={formData.image} onChange={handleChange}/>
       </label>
       <label>
         <span>Precio</span>
-        <input type="text" name="price"  placeholder={restaurantToUpdate ? restaurantToUpdate.price : ''}{...register("price")}/>
+        <input type="text" name="price"  value={formData.price} onChange={handleChange}/>
       </label>
       <button>Editar Restaurant</button>
     </form>
+
   );
 };
+
 
 export default EditRestaurant;
