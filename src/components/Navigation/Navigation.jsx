@@ -25,10 +25,10 @@ const Navigation = () => {
           <button className="buttonContact">Contacta con nosotros</button>
         </Link>
         <Link to="/login">
-          <button>Inicia Sesión</button>
+          <button className="userbutton">Inicia Sesión</button>
         </Link>
         <Link to="/users/register">
-          <button>Registro</button>
+          <button className="userbutton">Registro</button>
         </Link>
       </div>
     </div>

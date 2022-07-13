@@ -22,6 +22,7 @@ import Logout from "./pages/Logout/Logout";
 import EditExperience from "./pages/Admin/EditExperience";
 import ManageRestaurants from "./pages/Admin/ManageRestaurants";
 import EditRestaurant from "./pages/Admin/EditRestaurant";
+import UserBooks from "./pages/User/UserBooks";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -36,6 +37,8 @@ root.render(
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/users/register" element={<Register />} />
+          <Route path="/users/books" element={<UserBooks />} />
+          <Route path="/users/edit" element={<UserEdit />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/manageexperiences" element={<ManageExperiences />} />
           <Route path="/admin/managerestaurants" element={<ManageRestaurants />} />

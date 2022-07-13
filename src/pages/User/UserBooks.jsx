@@ -13,7 +13,7 @@ const UserEdit = () => {
         <div>
         <img className="backroundImage" src="https://cdn.wallpapersafari.com/18/9/QLolf9.jpg" alt="Backround"
       ></img>
-        <h1 className="title">Edita tu perfil</h1>
+        <h1 className="title">Mis Reservas</h1>
         <h4 className="title">Page under construction</h4>
         <img src="https://www.seekpng.com/png/full/10-102101_under-construction-website-is-under-construction-png.png" alt="underconstruction"></img>
         </div>

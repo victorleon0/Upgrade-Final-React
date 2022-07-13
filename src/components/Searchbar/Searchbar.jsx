@@ -7,6 +7,8 @@ const Searchbar = () => {
       
 
       <input id="input-search" type="text" placeholder="¿Dónde vamos?" />
+      <a href="/food"><button className="buttonGo">¡Vamos!</button></a>
+      
     </div>
   );
 };

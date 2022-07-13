@@ -55,7 +55,7 @@ const Register = (/* prop */) => {
             onChange={handleInput}
           />
           <button className="submit" type="submit" value="Login" onClick={submitRegister}>
-            Login
+            Registro
           </button>
           <a href="/login">¿Ya tienes cuenta? Inicia Sesión</a>
         </form>

@@ -13,11 +13,16 @@
     padding-right: 5px;
     background-color: whitesmoke;
     font-weight: bold;
+    
   }
-  .geolocationButton {
+  .buttonGo {
     background-color: transparent;
     border: 1px solid grey;
+    background: linear-gradient(to bottom right, #f8df7b, #b05574);
     border-radius: 10px;
+    height: 30px;
+    width: 100px;
     cursor: pointer;
+    margin-bottom: 10px;
   }
 }
