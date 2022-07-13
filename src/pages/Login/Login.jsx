@@ -36,12 +36,8 @@ const Login = () => {
   return (
     <div className="login">
       <div className="navigator">
-        <Searchbar />
       </div>
-      <img
-        className="backroundImage"
-        src="https://i.pinimg.com/originals/9e/c2/d5/9ec2d5ce4f42ccc310f13f1c0f53d295.jpg"
-        alt="Backround"
+      <img className="backroundImage" src="https://i.pinimg.com/originals/9e/c2/d5/9ec2d5ce4f42ccc310f13f1c0f53d295.jpg" alt="Backround"
       ></img>
       <div className="formContainer">
         <h4>Login</h4>

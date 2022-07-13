@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import Searchbar from "../../components/Searchbar/Searchbar";
 import "./Register.scss";
 
 const Register = (/* prop */) => {
@@ -38,7 +37,6 @@ const Register = (/* prop */) => {
   return (
     <div className="register">
       <div className="navigator">
-        <Searchbar />
       </div>
       <img
         className="backroundImage"
