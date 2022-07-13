@@ -1,28 +1,28 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { deleteExperience } from "../../redux/experience/experience.actions";
+import { deleteRestaurant } from "../../redux/restaurant/restaurant.actions";
 import { useDispatch } from "react-redux";
 
-import "./ExperiencesAllAdmin.scss";
-import { experienceUrl } from "../../helpers/url.helper";
+
+import { restaurantUrl } from "../../helpers/url.helper";
 
 import { Link } from "react-router-dom"
 
-const ExperiencesAll = () => {
-  const [experiences, setExperiences] = useState([]);
+const RestaurantsAll = () => {
+  const [restaurants, setRestaurants] = useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const getExperiences = async () => {
+    const getRestaurants = async () => {
       try {
-        const res = await axios(experienceUrl);
-        setExperiences(res.data);
+        const res = await axios(restaurantUrl);
+        setRestaurants(res.data);
       } catch (error) {
         console.log("Error en petición", error);
       }
     };
 
-    getExperiences();
+    getRestaurants();
   }, []);
   function refreshPage() {
     window.location.reload(false);
@@ -33,41 +33,41 @@ const ExperiencesAll = () => {
       <h4 className="titlepage">
         Reserva ahora tu experiencia y disfruta de un descuento único
       </h4>
-      <div className="experiences__container">
-        {experiences &&
-          experiences.length > 0 &&
-          experiences.map((experience, id) => {
+      <div className="restaurants__container">
+        {restaurants &&
+          restaurants.length > 0 &&
+          restaurants.map((restaurant, id) => {
             return (
               <div className="container" key={id}>
                 <div className="card">
                   <img
                     className="image"
-                    src={experience.image}
-                    alt={experience.title}
+                    src={restaurant.image}
+                    alt={restaurant.title}
                   />
                   <div className="header">
                     <div className="product-name">
-                      {experience.title}
-                      <br /> <b> {experience.price}€</b>
+                      {restaurant.title}
+                      <br /> <b> {restaurant.price}€</b>
                     </div>
                   </div>
                   <div className="card-body">
                     <p className="description">
-                      {experience.subtitle} Lorem ipsum dolor sit amet,
+                      {restaurant.subtitle} Lorem ipsum dolor sit amet,
                       consectetur adipiscing elit, sed do eiusmod tempor
                       incididunt ut labore et dolore magna aliqua.{" "}
                     </p>
 
                     <div className="actions">
                       <div className="button bg-green c-white">
-                      <Link to={`/experience/${experience._id}`}><button>Modificar</button></Link>
+                      <Link to={`/restaurant/${restaurant._id}`}><button>Modificar</button></Link>
                     
                       </div>
                       <div className="buttonDelete">
                         <button
                           className="button"
                           onClick={() => {
-                            dispatch(deleteExperience(experience));
+                            dispatch(deleteRestaurant(restaurant));
                             refreshPage();
                           }}
                         >
@@ -85,4 +85,4 @@ const ExperiencesAll = () => {
   );
 };
 
-export default ExperiencesAll;
+export default RestaurantsAll;

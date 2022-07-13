@@ -5,10 +5,10 @@ const NavigationAdmin = () => {
   return (
     <div className="navigatorBar">
       <div className="linksContainer">
-      <Link to="/admin/managerestaurantes">
+      <Link to="/admin/managerestaurants">
           <button>Gestionar Restaurantes</button>
         </Link>
-        <Link to="/admin/addrestaurantes">
+        <Link to="/admin/addrestaurant">
           <button>Añadir Restaurantes</button>
         </Link>
         <Link to="/admin/manageexperiences">

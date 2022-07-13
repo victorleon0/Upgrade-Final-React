@@ -46,19 +46,19 @@ const EditExperience = () => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <label>
         <span>Titulo</span>
-        <input type="text" name="title" value={experienceToUpdate ? experienceToUpdate.title : ''} {...register("title")} />
+        <input type="text" name="title" placeholder={experienceToUpdate ? experienceToUpdate.title : ''} {...register("title")} />
       </label>
       <label>
         <span>Subtitle</span>
-        <input type="text" name="subtitle"  value={experienceToUpdate ? experienceToUpdate.subtitle : ''}{...register("subtitle")}/>
+        <input type="text" name="subtitle"  placeholder={experienceToUpdate ? experienceToUpdate.subtitle : ''}{...register("subtitle")}/>
       </label>
       <label>
         <span>Image</span>
-        <input type="text" name="image"  value={experienceToUpdate ? experienceToUpdate.image : ''}{...register("image")}/>
+        <input type="text" name="image"  placeholder={experienceToUpdate ? experienceToUpdate.image : ''}{...register("image")}/>
       </label>
       <label>
         <span>Precio</span>
-        <input type="text" name="price"  value={experienceToUpdate ? experienceToUpdate.price : ''}{...register("price")}/>
+        <input type="text" name="price"  placeholder={experienceToUpdate ? experienceToUpdate.price : ''}{...register("price")}/>
       </label>
       <button>Editar Experience</button>
     </form>

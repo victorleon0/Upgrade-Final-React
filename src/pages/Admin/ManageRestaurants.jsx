@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
 import NavigationAdmin from "../../components/NavigationAdmin/NavigationAdmin";
-import RestaurantsAllAdmin from "../../components/RestaurantsAdmin/RestaurantsAllAdmin";
+import RestaurantsAllAdmin from "../../components/ExperiencesAdmin/RestaurantsAllAdmin";
 
 
 
