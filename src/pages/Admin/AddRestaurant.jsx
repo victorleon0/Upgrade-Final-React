@@ -3,7 +3,7 @@ import Footer from "../../components/Footer/Footer";
 import NavigationAdmin from "../../components/NavigationAdmin/NavigationAdmin";
 import ExperienceForm from "../../components/ExperiencesAdmin/ExperienceForm/ExperienceForm";
 
-const AddExperience = () => {
+const AddRestaurant = () => {
   return (
     <div className="admin">
       <div className="navigatorAdmin">
@@ -20,4 +20,4 @@ const AddExperience = () => {
   );
 };
 
-export default AddExperience;
+export default AddRestaurant;
