@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import Searchbar from "../Searchbar/Searchbar.jsx";
+import HomeButton from "../HomeButton/HomeButton";
 import "./Navigation.scss";
 
 const Navigation = () => {
   return (
     <div className="navigatorBar">
       <div className="searchbar">
-        <Searchbar />
+        <HomeButton />
       </div>
       <div className="linksContainer">
         
