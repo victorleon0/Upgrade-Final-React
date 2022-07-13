@@ -14,14 +14,14 @@ const ExperienceForm = () => {
   const dispatch = useDispatch();
   const [form, setForm] = useState(INITIAL_STATE);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (eve) => {
+    eve.preventDefault();
     dispatch(createExperience(form));
     setForm(INITIAL_STATE);
   };
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
+  const handleChange = (eve) => {
+    const { name, value } = eve.target;
     setForm({ ...form, [name]: value });
   };
 

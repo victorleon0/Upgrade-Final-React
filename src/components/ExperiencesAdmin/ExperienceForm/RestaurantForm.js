@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createExperience } from "../../../redux/experience/experience.actions";
+import { createRestaurant } from "../../../redux/restaurant/restaurant.actions";
 
 
 const INITIAL_STATE = {
@@ -14,14 +14,14 @@ const RestaurantForm = () => {
   const dispatch = useDispatch();
   const [form, setForm] = useState(INITIAL_STATE);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(createExperience(form));
+  const handleSubmit = (eve) => {
+    eve.preventDefault();
+    dispatch(createRestaurant(form));
     setForm(INITIAL_STATE);
   };
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
+  const handleChange = (eve) => {
+    const { name, value } = eve.target;
     setForm({ ...form, [name]: value });
   };
 
