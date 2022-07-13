@@ -1,5 +1,4 @@
 import React from "react";
-import EditComponent from "../../components/ExperiencesAdmin/EditForm/EditForm";
 import Footer from "../../components/Footer/Footer";
 import NavigationAdmin from "../../components/NavigationAdmin/NavigationAdmin";
 import ExperiencesAllAdmin from "../../components/ExperiencesAdmin/ExperiencesAllAdmin";

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { editExperience } from '../../redux/experience/experience.actions';
 import { useNavigate, useParams } from "react-router-dom";
 import { experienceUrl } from "../../helpers/url.helper";
@@ -34,10 +34,6 @@ const EditExperience = () => {
   const navigate = useNavigate();
 
   const {register, handleSubmit } = useForm({defaultValues:{
-    // title:experienceToUpdate.title,
-    // subtitle:experienceToUpdate.subtitle,
-    // image:experienceToUpdate.image,
-    // price:experienceToUpdate.price,
   }});
 
 

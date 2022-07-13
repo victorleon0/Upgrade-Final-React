@@ -1,16 +1,18 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
 import NavigationAdmin from "../../components/NavigationAdmin/NavigationAdmin";
-import RestaurantForm from "../../components/ExperiencesAdmin/ExperienceForm/RestaurantForm";
+import RestaurantsAllAdmin from "../../components/RestaurantsAdmin/RestaurantsAllAdmin";
 
-const AddRestaurant = () => {
+
+
+const ManageRestaurants = () => {
   return (
     <div className="admin">
       <div className="navigatorAdmin">
         <NavigationAdmin />
       </div>
       <div className="users-container">
-        <RestaurantForm />
+      <RestaurantsAllAdmin/>
       </div>
       <div className="buscadorHome"></div>
       <div className="footer">
@@ -20,4 +22,4 @@ const AddRestaurant = () => {
   );
 };
 
-export default AddRestaurant;
+export default ManageRestaurants;
