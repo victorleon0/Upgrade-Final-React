@@ -27,7 +27,7 @@ const ExperienceForm = () => {
 
   return (
     <div className="flex-container">
-      <div className="container">
+      <div className="containertrip">
         <h1>Añadir Excursión</h1>
 
         <form onSubmit={handleSubmit}>

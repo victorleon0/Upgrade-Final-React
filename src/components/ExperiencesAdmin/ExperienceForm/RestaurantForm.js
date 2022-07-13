@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createRestaurant } from "../../../redux/restaurant/restaurant.actions";
 
+import './RestaurantForm.scss';
 
 const INITIAL_STATE = {
   title: "",
@@ -27,8 +28,8 @@ const RestaurantForm = () => {
 
   return (
     <div className="flex-container">
-      <div className="container">
-        <h1>Añadir Excursión</h1>
+      <div className="containerrestaurant">
+        <h1>Añadir Restaurante</h1>
 
         <form onSubmit={handleSubmit}>
           <label htmlFor="title">Titulo</label>

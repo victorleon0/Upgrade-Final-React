@@ -12,6 +12,7 @@ const ManageExperiences = () => {
         <NavigationAdmin />
       </div>
       <div className="users-container">
+      
       <ExperiencesAllAdmin/>
       </div>
       <div className="buscadorHome"></div>
