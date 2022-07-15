@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import FilterByInput from "../FilterByInput/FilterByInput";
 
 import "./ExperiencesAll.scss";
 import { experienceUrl } from "../../helpers/url.helper";
@@ -24,7 +23,6 @@ const ExperiencesAll = () => {
   return (
     <>
       <h4 className="titlepage">Reserva ahora tu experiencia y disfruta de un descuento único</h4>
-      <FilterByInput />
       <div className="experiences__container">
         {experiences &&
           experiences.length > 0 &&
